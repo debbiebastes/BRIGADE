@@ -22,11 +22,11 @@ prompt = f"""Generate a compelling and detailed description of a product for a m
 Product:
 ```
 Product Name: Aspen Dining Table
- Style: Rustic
- Color Variations: Oak, Maple
- Material: Solid Wood
- Furniture type: 4-seater Dining Table
- Product Category: Dining Room Furniture - Aspen Series
+Style: Rustic
+Color Variations: Oak, Maple
+Material: Solid Wood
+Furniture type: 4-seater Dining Table
+Product Category: Dining Room Furniture - Aspen Series
 Weight in kilograms: 12
 Length in meters: 2
 Width in meters: 0.76 
