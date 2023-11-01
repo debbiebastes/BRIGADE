@@ -32,9 +32,9 @@ def product_review(payload):
 
     #create product review for each product in the catalog
     product_review = {
-        "Name of Reviewer": fake.name(),
         "Product ID": payload.get('Furniture_ID', 'Unknown Product ID'),
         "Product Name": payload.get('Furniture_Name', 'Unknown Product'),
+        "Name of Reviewer": fake.name(),
         "Star Rating": fake.pyint(min_value=1, max_value=5),
     }
 
@@ -49,8 +49,7 @@ def product_review(payload):
 
     try:
         GenAI_review_text = call_ai(prompt)
-        body_dict = json.loads(GenAI_review_text['body'])
-        product_review['Product Review'] = body_dict['Product Review']
+        product_review['Product Review'] = json.loads(GenAI_review_text['body'])['Product Review']
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return None
