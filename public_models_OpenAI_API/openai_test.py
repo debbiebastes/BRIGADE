@@ -1,12 +1,15 @@
-#import modules needed for OpenAI API communication
+# Import modules needed for OpenAI API communication
 import os
 import openai
 
+# Read local .env file
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
 
+# Your API key from OpenAI
 openai.api_key  = os.getenv('OPENAI_API_KEY')
 
+# Call the Generetive AI Service like OPENAI
 completion = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
   messages=[
@@ -15,4 +18,5 @@ completion = openai.ChatCompletion.create(
   ]
 )
 
+# Do something with the AI response
 print(completion.choices[0].message["content"])

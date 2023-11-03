@@ -1,11 +1,15 @@
+# Import modules needed for OpenAI API communication
 import os
 import openai
 
+# Read local .env file
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
 
+# Your API key from OpenAI
 openai.api_key  = os.getenv('OPENAI_API_KEY')
 
+# Call the Generetive AI Service like OPENAI
 def call_ai(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     temperature=1
@@ -23,8 +27,7 @@ def call_ai(prompt, model="gpt-3.5-turbo"):
         }
     }
 
-#test code to get a response from the openai api
-
+# Create a prompt to send to the Generative AI Service
 product_details="""
 Product Name: Aspen Dining Table
 Style: Rustic
@@ -46,7 +49,8 @@ Product:
 
 """ 
 
+# Do something with the AI response
 print('Prompt: %s' %prompt)
 response = call_ai(prompt)
-print('Response:\n %s ' %response['body'])
-print('Context:\n %s ' %response['context'])
+print('Response:\n%s ' %response['body'])
+print('\nContext:\n%s ' %response['context'])
