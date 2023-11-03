@@ -24,7 +24,6 @@ def call_ai(prompt, model="gpt-3.5-turbo"):
             'ChatGPT model': response.model,
             'temperature': temperature,
             'ChatGPT token usage': response.usage,
-            'prompt': prompt,
         }
     }
 

@@ -3,7 +3,7 @@ import GenAI_faker
 import os
 import csv
 
-
+# Read local .env file
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
 

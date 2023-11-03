@@ -6,7 +6,7 @@ import openai
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
 
-# Set the API key from the environment variable
+# Set the API key attribute of the GenAI_faker library 
 openai.api_key  = os.getenv('OPENAI_API_KEY')
 
 # Call the Generetive AI Service like OPENAI
