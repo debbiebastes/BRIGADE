@@ -1,4 +1,4 @@
-#import modules needed for Chat GPT comms
+# Import modules needed for OpenAI API communications
 import openai
 import os
 import time
@@ -8,6 +8,7 @@ from faker import Faker
 fake = Faker()
 api_key=''
 
+# Call the Generetive AI Service like OPENAI
 def call_ai(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     temperature = 0.8
