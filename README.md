@@ -1,1 +1,1 @@
-# genai_enterprise_use_case
+# Generative AI enterprise use case samples
