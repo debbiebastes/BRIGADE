@@ -8,7 +8,7 @@ from faker import Faker
 fake = Faker()
 api_key=''
 
-# Call the Generetive AI Service like OPENAI
+# Call the Generative AI Service like OpenAI
 def call_ai(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     temperature = 0.8

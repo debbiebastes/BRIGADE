@@ -9,7 +9,7 @@ _ = load_dotenv(find_dotenv()) # read local .env file
 # Set the API key from the environment variable
 openai.api_key  = os.getenv('OPENAI_API_KEY')
 
-# Call the Generetive AI Service like OPENAI
+# Call the Generative AI Service like OpenAI
 def call_ai(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
     temperature=0.5
