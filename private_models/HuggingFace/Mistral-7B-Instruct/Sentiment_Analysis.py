@@ -2,7 +2,6 @@
 import os
 import requests
 
-
 # Token from your HF account, set as an environment variable in your machine.
 api_token = os.getenv("HF_API_TOKEN")  
 
@@ -27,7 +26,6 @@ def call_ai(prompt):
     }
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()[0]['generated_text']
-
 
 # Create a prompt to send to the Generative AI Service
 product_name = "Kyushu Calm Lounge Sofa"
