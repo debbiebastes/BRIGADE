@@ -1,4 +1,3 @@
-# Import modules needed for OpenAI API communication
 import os
 import requests
 
