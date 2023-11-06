@@ -1,0 +1,6 @@
+Furniture_ID,Furniture_Name,Style,Color_Variations,Material,Furniture_Type,Product_Category,Description,Weight_in_kg,Lenght_in_meters,Width_in_meters,Height_in_meters
+F-000010,Serenity Bed,"['Vintage', 'Ornate']","['Ivory', 'Gold', 'Antique Silver']","Mahogany Wood, Velvet",Bed,Bedroom Furniture,A vintage-style bed frame with an ornate headboard and luxurious velvet upholstery,15,2.2,1.8,1.5
+F-000011,Echo Coffee Table,"['Industrial', 'Reclaimed']","['Black', 'Brown', 'Weathered Gray']","Metal, Reclaimed Wood",Coffee Table,Living Room Furniture,An industrial-style coffee table with a sturdy metal frame and a reclaimed wood top,12,1.2,0.8,0.4
+F-000012,Cascade Bookshelf,"['Scandinavian', 'Modern']","['White', 'Natural Wood', 'Gray']","Wood, Metal",Bookshelf,Home Office Furniture,A Scandinavian-style bookshelf with open shelving and a combination of wood and metal materials,18,1.5,0.6,2.2
+F-000013,Ember Ottoman,"['Mid-Century', 'Elegant']","['Light Gray', 'Teal', 'Cream']","Velvet, Walnut Wood",Ottoman,Living Room Furniture,A mid-century-style ottoman with elegant velvet upholstery and walnut wood legs,4,0.6,0.6,0.4
+F-000014,Solace Wardrobe,"['Traditional', 'Classic']","['Cherry Wood', 'Mahogany', 'Antique White']","Wood, Glass",Wardrobe,Bedroom Furniture,"A traditional-style wardrobe with ample storage space, carved details, and glass accents",50,2.5,1.2,2.3
