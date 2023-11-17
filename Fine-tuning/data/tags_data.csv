@@ -1,0 +1,645 @@
+role,content
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array."
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+```
+AWS Architecture Blog
+Extending your SaaS platform with AWS Lambda
+
+Software as a service (SaaS) providers continuously add new features and capabilities to their products to meet their growing customer needs. As enterprises adopt SaaS to reduce the total cost of ownership and focus on business priorities, they expect SaaS providers to enable customization capabilities.
+
+Many SaaS providers allow their customers (tenants) to provide customer-specific code that is triggered as part of various workflows by the SaaS platform. This extensibility model allows customers to customize system behavior and add rich integrations, while allowing SaaS providers to prioritize engineering resources on the core SaaS platform and avoid per-customer customizations.
+
+To simplify experience for enterprise developers to build on SaaS platforms, SaaS providers are offering the ability to host tenant’s code inside the SaaS platform. This blog provides architectural guidance for running custom code on SaaS platforms using AWS serverless technologies and AWS Lambda without the overhead of managing infrastructure on either the SaaS provider or customer side.
+
+Vendor-hosted extensions
+With vendor-hosted extensions, the SaaS platform runs the customer code in response to events that occur in the SaaS application. In this model, the heavy-lifting of managing and scaling the code launch environment is the responsibility of the SaaS provider.
+
+To host and run custom code, SaaS providers must consider isolating the environment that runs untrusted custom code from the core SaaS platform, as detailed in Figure 1. This introduces additional challenges to manage security, cost, and utilization.
+
+Distribution of responsibility between Customer and SaaS platform with vendor-hosted extensions
+Figure 1. Distribution of responsibility between Customer and SaaS platform with vendor-hosted extensions
+
+Using AWS serverless services to run custom code
+Using AWS serverless technologies removes the tasks of infrastructure provisioning and management, as there are no servers to manage, and SaaS providers can take advantage of automatic scaling, high availability, and security, while only paying for value.
+
+Example use case
+Let’s take an example of a simple SaaS to-do list application that supports the ability to initiate custom code when a new to-do item is added to the list. This application is used by customers who supply custom code to enrich the content of newly added to-do list items. The requirements for the solution consist of:
+
+Custom code provided by each tenant should run in isolation from all other tenants and from the SaaS core product
+Track each customer’s usage and cost of AWS resources
+Ability to scale per customer
+Solution overview
+The SaaS application in Figure 2 is the core application used by customers, and each customer is considered a separate tenant. For the sake of brevity, we assume that the customer code was already stored in an Amazon Simple Storage Service (Amazon S3) bucket as part of the onboarding. When an eligible event is generated in the SaaS application as a result of user action, like a new to-do item added, it gets propagated down to securely launch the associated customer code.
+
+Example use case architecture
+Figure 2. Example use case architecture
+
+Walkthrough of custom code run
+Let’s detail the initiation flow of custom code when a user adds a new to-do item:
+
+An event is generated in the SaaS application when a user performs an action, like adding a new to-do list item. To extend the SaaS application’s behavior, this event is linked to the custom code. Each event contains a tenant ID and any additional data passed as part of the payload. Each of these events is an “initiation request” for the custom code Lambda function.
+Amazon EventBridge is used to decouple the SaaS Application from event processing implementation specifics. EventBridge makes it easier to build event-driven applications at scale and keeps the future prospect of adding additional consumers. In case of unexpected failure in any downstream service, EventBridge retries sending events a set number of times.
+EventBridge sends the event to an Amazon Simple Queue Service (Amazon SQS) queue as a message that is subsequently picked up by a Lambda function (Dispatcher) for further routing. Amazon SQS enables decoupling and scaling of microservices and also provides a buffer for the events that are awaiting processing.
+The Dispatcher polls the messages from SQS queue and is responsible for routing the events to respective tenants for further processing. The Dispatcher retrieves the tenant ID from the message and performs a lookup in the database (we recommend Amazon DynamoDB for low latency), retrieves tenant SQS Amazon Resource Name (ARN) to determine which queue to route the event. To further improve performance, you can cache the tenant-to-queue mapping.
+The tenant SQS queue acts as a message store buffer and is configured as an event source for a Lambda function. Using Amazon SQS as an event source for Lambda is a common pattern.
+Lambda executes the code uploaded by the tenant to perform the desired operation. Common utility and management code (including logging and telemetry code) is kept in Lambda layers that get added to every custom code Lambda function provisioned.
+After performing the desired operation on data, custom code Lambda returns a value back to the SaaS application. This completes the run cycle.
+This architecture allows SaaS applications to create a self-managed queue infrastructure for running custom code for tenants in parallel.
+
+Tenant code upload
+The SaaS platform can allow customers to upload code either through a user interface or using a command line interface that the SaaS provider provides to developers to facilitate uploading custom code to the SaaS platform. Uploaded code is saved in the custom code S3 bucket in .zip format that can be used to provision Lambda functions.
+
+Custom code Lambda provisioning
+The tenant environment includes a tenant SQS queue and a Lambda function that polls launch requests from the queue. This Lambda function is built from two parts: (1) common code provided by the SaaS platform and (2) custom code provided by customers.
+
+The common code is responsible for bridging the SaaS platform and custom business logic provided by tenants. It “wraps” the custom code provided by the customer, so that custom code is fully abstracted from the processing implementation specifics. For example, we do not want custom code to know that the payload it is receiving comes from Amazon SQS or be aware of the destination where the launch response is sent. Two major parts the common code is responsible for are:
+
+Polling messages from the SQS queue and constructing a JSON payload that is sent an input to custom code.
+Once the custom code initiation is complete, the common code emits a notification with processing results back to the SaaS application. This can be done directly via EventBridge or Amazon SQS.
+This common code can be shared across tenants and deployed by the SaaS provider, either as a library or as a Lambda layer that gets added to the Lambda function.
+
+Each Lambda function initiation environment is fully isolated by using a combination of open-source and proprietary isolation technologies, it helps you to address the risk of cross-contamination. By having a separate Lambda function provisioned per-tenant, you achieve the highest level of isolation and benefit from being able to track per-tenant costs.
+
+Conclusion
+In this blog post, we explored the need to extend SaaS platforms using custom code and why AWS serverless technologies—using Lambda and Amazon SQS—can be a good fit to accomplish that. We also looked at a solution architecture that can provide the necessary tenant isolation and is cost-effective for this use case.
+
+For more information on building applications with Lambda, visit Serverless Land. For best practices on building SaaS applications, visit SaaS on AWS.
+```"
+assistant,"[""Serverless"", ""Lambda"", ""Scalability""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+```
+AWS Compute Blog
+Testing AWS Lambda functions with AWS SAM remote invoke
+by Eric Johnson | on 22 JUN 2023 | in AWS Lambda, AWS Serverless Application Model, Serverless | Permalink |  Share
+Developers are taking advantage of event driven architecture (EDA) to build large distributed applications. To build these applications, developers are using managed service like AWS Lambda, AWS Step Functions, and Amazon EventBridge to handle compute, orchestration, and choreography. Since these services run in the cloud, developers are also looking for ways to test in the cloud. With this in mind, AWS SAM is adding a new feature to the AWS SAM CLI called remote invoke.
+
+AWS SAM remote invoke enables developers to invoke a Lambda function in the AWS Cloud from their development environment. The feature has several options for identifying the Lambda function to invoke, the payload event, and the output type.
+
+Using remote invoke
+To test the remote invoke feature, there is a small AWS SAM application that comprises two AWS Lambda functions. The TranslateFunction takes a text string and translates it to the target language using the AI/ML service Amazon Translate. The StreamFunction generates data in a streaming format. To run these demonstrations, be sure to install the latest AWS SAM CLI.
+
+To deploy the application, follow these steps:
+
+Clone the repository:
+git clone https://github.com/aws-samples/aws-sam-remote-invoke-example
+Bash
+Change to the root directory of the repository:
+cd aws-sam-remote-invoke-example
+Bash
+Build the AWS Lambda artifacts (use the –use-container option to ensure Python 3.10 and Node 18 are present. If these are both set up on your machine, you can ignore this flag):
+sam build --use-container
+Bash
+Deploy the application to your AWS account:
+sam deploy --guided
+Bash
+Name the application “remote-test” and choose all defaults.
+AWS SAM can now remotely invoke the Lambda functions deployed with this application. Use the following command to test the TranslateFunction:
+
+sam remote invoke --stack-name remote-test --event '{""message"":""I am testing the power of remote invocation"", ""target-language"":""es""}' TranslateFunction
+Bash
+This is a quick way to test a small event. However, developers often deal with large complex payloads. The AWS SAM remote invoke function also allows an event to be passed as a file. Use the following command to test:
+
+sam remote invoke --stack-name remote-test --event-file './events/translate-event.json' TranslateFunction
+Bash
+With either of these methods, AWS SAM returns the response from the Lambda function as if it were called from a service like Amazon API Gateway. However, AWS SAM also offers the ability to get the raw response as returned from the Python software development kit (SDK), boto3. This format provides additional information such as the version that you invoked, if any retries were attempted, and more. To retrieve this output, run the invocation with the additional –output parameter with the value of json.
+
+sam remote invoke --stack-name remote-test --event '{""message"": ""I am testing the power of remote invocation"", ""target-language"": ""es""}' --output json TranslateFunction
+Bash
+Full output from SDK
+Full output from SDK
+
+It is also possible to invoke Lambda functions that are not created in AWS SAM. Using the name of a Lambda function, AWS SAM can remotely invoke any Lambda function that you have permission to invoke. When you deployed the sample application, AWS SAM prints the name of the Lambda function in the console. Use the following command to print the output again:
+
+sam list stack-outputs --stack-name remote-test
+Bash
+Using the output for the TranslateFunctionName, run:
+
+sam remote invoke --event '{""message"": ""Testing direct access of the function"", ""target-language"": ""fr""}' <TranslateFunctionName>
+Bash
+Lambda recently added support from streaming responses from Lambda functions. Streaming functions do not wait until the entire response is available before they respond to the client. To show this, the StreamFunction generates multiple chunks of text and sends them over a period of time.
+
+To invoke the function, run:
+
+sam remote invoke --stack-name remote-test StreamFunction
+Bash
+Extending remote invoke
+The AWS SDKs offer different options when invoking Lambda functions via the Lambda service. Behind the scenes, AWS SAM is using boto3 to power the remote invoke functionality. To make full use of the SDK options for Lambda function invocation, the AWS SAM offers a —parameter flag that can be used multiple times.
+
+For example, you may want to run an invocation as a dry run only. This type of invocation tests Lambda’s ability to invoke the function based on factors like variable values and proper permissions. The command looks like the following:
+
+sam remote invoke --stack-name remote-test --event '{""message"": ""I am testing the power of remote invocation"", ""target-language"": ""es""}' --parameter InvocationType=DryRun --output json TranslateFunction
+Bash
+In a second example, I want to invoke a specific version of the Lambda function:
+
+sam remote invoke --stack-name remote-test --event '{""message"": ""I am testing the power of remote invocation"", ""target-language"": ""es""}' --parameter Qualifier='$LATEST' TranslateFunction
+Bash
+If you need both options:
+
+sam remote invoke --stack-name remote-test --event '{""message"": ""I am testing the power of remote invocation"", ""target-language"": ""es""}' --parameter InvocationType=DryRun --parameter Qualifier='$LATEST' --output json TranslateFunction
+Bash
+Logging
+When developing distributed applications, logging is a critical tool to trace the state of a request across decoupled microservices. AWS SAM offers the sam logs functionality to help view aggregated logs and traces from Amazon CloudWatch and AWS X-Ray, respectively. However, when testing individual functions, developers want contextual logs pinpointed to a specific invocation. The new remote invoke function provides these logs by default. Returning to the TranslateFunction, run the following command again:
+
+sam remote invoke --stack-name remote-test --event '{""message"": ""I am testing the power of remote invocation"", ""target-language"": ""es""}' TranslateFunction
+Bash
+Logging response from remote invoke
+Logging response from remote invoke
+
+The remote invocation returns the response from the Lambda function, any logging from within the Lambda function, followed by the final report from the Lambda service about the invocation itself.
+
+Combining remote invoke with AWS SAM Accelerate
+Developers are constantly striving to remove complexity and friction and improve speed and agility in the development pipeline. To help serverless developers towards this goal, the AWS SAM team released a feature called AWS SAM Accelerate. AWS SAM Accelerate is a series of features that move debugging and testing from the local machine to the cloud.
+
+To show how AWS SAM Accelerate and remote invoke can work together, follow these steps:
+
+In a separate terminal, start the AWS SAM sync process with the watch option:
+sam sync --stack-name remote-test --use-container --watch
+Bash
+In a second window or tab, run the remote invoke function:
+sam remote invoke --stack-name remote-test --event-file './events/translate-event.json' TranslateFunction
+Bash
+The combination of these two options provides a robust auto-deployment and testing environment. During iterations of code in the Lambda function, each time you save the file, AWS SAM syncs the code and any dependencies to the cloud. As needed, the remote invoke is then run to verify the code works as expected, with logging provided for each execution.
+
+Conclusion
+Serverless developers are looking for the most efficient way to test their applications in the AWS Cloud. They want to invoke an AWS Lambda function quickly without having to mock security, external services, or other environment variables. This blog shows how to use the new AWS SAM remote invoke feature to do just that.
+
+This post shows how to invoke the Lambda function, change the payload type and location, and change the output format. It explains using this feature in conjunction with the AWS SAM Accelerate features to streamline the serverless development and testing process.
+```"
+assistant,"[""Serverless"", ""Lambda"", ""DevOps""]
+"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT: 
+```
+A Salute to Read Replicas
+
+The database is the heart of applications. If your database server goes down, or is incredibly choked due to high volume and starts grinding to a halt, it doesn't really matter if your application servers are still up - they wouldn't be able to do useful things for your user without talking to the database server.
+The Cloud gives us a really easy way to scale database compute capacity and resilience: the Read Replica!
+What's a Read Replica?
+Read replicas are pretty straightforward - they are an up-to-date, read-only copy of your primary database instance.
+In AWS, Amazon Relational Database Service (RDS) allows you to create read replicas of your primary DB instance with basically zero effort. RDS uses asynchronous replication to keep the read replicas up-to-date with the master. The specific replication technology used varies, depending on what database engine your primary DB uses (e.g., MySQL, Oracle, PostgreSQL, etc)
+Read replicas have distinct endpoints, different from the primary DB instance. Your application will have to be configured to connect to the correct endpoint (primary vs read replica), depending on what it needs to do. That means read+write workloads are directed to the primary DB endpoint, while your read-only workloads (e.g., dashboards and report generation) are directed to the read replica.
+Read replicas are not free - they are priced just like a primary instance. If your read replica is the same size as your primary instance, then it would cost the same. If it is larger or smaller (read replicas don't need to be exactly the same size as the primary DB instance), then the pricing adjusts as you would expect.
+OK, So What's a Read Replica Good For?
+The primary benefit of a read replica is making your database more performant. Since a read replica is effectively a duplicate server, you get that extra compute capacity for your database needs.
+And it's not just that you get twice the computing power - it's how you get it.
+If you doubled the size of your primary DB instance, instead of adding a read replica to it, sure, you'd get equivalent total specs on paper. But with the read replica setup, you can effectively partition your workloads so that heavy read processing can't bog down your critical transaction processing. If you merely doubled the size of the primary DB instance, a surge of heavy report generation and dashboarding could suddenly slow-down the entire DB instance and affect other areas of your application, such as accepting and encoding user transactions and other sorts of data ingestion.
+And that's not all! Read replicas also give you an availability improvement. If you wanted Availability Zone (AZ)-level high availability, you could place your read replica in a different AZ from your primary DB instance. When your primary DB goes down, whether just an instance problem or a legitimate AZ-level service disruption, your read replica can be promoted to be a standalone DB, becoming the new primary DB instance. This takes only minutes - a lot faster than if you had to manually create a new primary DB instance from scratch using a backup.
+Use Cases
+Let's try to bring down what we've learned so far to more specific and easily-grokable use cases.
+Q: JV, I'm running a database in RDS, and a couple times every week it slows down to a crawl, affecting all of our operations dependent on that DB. I found that it was because of a surge of mid-day or end-day report generation from a bunch of users. What can I do to improve our service?
+A: Create a read replica. Point your applications to it for report generation. This way your primary DB instance will be protected from any reporting surge that happens.
+Q: JV, I manage an RDS DB instance. To comply with new IT mandate, our service needs to survive an entire AZ outage. What's the best way to do this as fast as possible with the least amount of effort?
+A: Create a read replica. Place it in a different AZ. When your primary DB instance goes offline due to an AZ outage, promote your replica. As a bonus, you can also point all your heavy read workloads to the read replica endpoint, instead of the primary, giving you a boost in performance and protecting your primary DB instance from sudden read surges that end up choking all your other critical transactions.
+Q: JV, I have an RDS DB instance that serves three distinct but equally important internal customers. The Sales Department primarily uses it to encode tons of sales, customers, and item data every single day. The Marketing Department primarily uses it to generate dashboards and complex reports. The Logistics Department also uses it for their own set of heavy reports, though they typically use less than the Marketing Department based on logs. Sometimes, one of the departments ends up bogging the system down too much with heavy reporting usage, and it prevents the other departments from getting work done, especially Sales. What's the best way to fix this so that all my internal customers are happy?
+A: Create read replicas. Create one read replica for the report generation and dashboards of the Marketing Department, and another (possibly smaller) read replica for the report generation of the Logistics Department. Sales should remain targeting the primary instance, since they are write-heavy. Your internal customers are now effectively insulated against each other. For cost-efficiency, make sure to adjust the sizes of your instances as appropriate. Furthermore, if you are in an AWS Region that has more than two AZs, your primary and two replicas can be in three different AZs for increased resilience.
+Q: JV, I have an RDS DB instance that powers our company's website and storefront. I need to prepare it for a surge of customers for tomorrow's ""special sale"" event. From past experience, we get almost 5x more traffic from people browsing our storefront, and it usually ends up congesting our DB server. What's the easiest way I can scale up my capacity?
+A: Create read replicas. The quantity and size of the read replicas will depend on your expected read surge. Load balance read requests (such as all storefront viewing and item querying) against your read replicas (each one will have a distinct endpoint) using either your native application platform's endpoint load (e.g., some PHP database drivers can do this for you), or you can use Amazon Route 53 weighted record sets to distribute requests across your read replicas. If the extra order volume (assuming your sales event also results in more customer orders, and not just views) can now be easily handled by the current primary DB instance size after offloading read requests to your cluster of replicas, then you have nothing more to do. Else, if you are unsure, you can scale up your primary DB instance a bit to be safe. Review the performance logs after the event, so you have better information for your next sale event (e.g., how many replicas, what their sizes should be, and should you also scale up your primary).
+Wrap up
+There you go, a good dose of read replica love! As a database administrator, you'll find that a lot of problems can be solved with smart usage of read replicas - from performance to availability and DR.
+```"
+assistant,"[“Read Replica"", ""Performance"",""Disaster Recovery""]
+"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+```
+The Problem With Serverless - From a Serverless Addict
+
+""The answer is serverless. What's the question?"" is a joke I often make. I'm a serverless addict. The less charitable might even say ""serverless nutjob"".
+I love serverless, and I truly believe it is the best possible future for mainstream computing.
+Lately though, I've been thinking about what's holding serverless back - in no small part because of frustrations from hyperscalers.
+And no - it isn't vendor lock-in.
+Problem #1: Bad hyperscaler stewardship
+Serverless is essentially the most abstracted, low-touch way to manage your mission-critical workloads without it being simply a SaaS offering.
+This means you expect the serverless provider (the hyperscale clouds like AWS, Google Cloud, Azure, etc) to be doing much more heavy-lifting compared to Infrastructure-as-a-Service (IaaS) or Platform-as-a-Service (PaaS) offerings.
+If you went IaaS for your workloads (e.g., EC2), then you do all the heavy lifting to make it highly-available, performant, resilient and secure.
+If you decide to go PaaS (e.g., RDS, Elastic Beanstalk), then you offload a lot of that heavy lifting. It's less work to make deployments highly-available, for example, as it can literally be just a few console clicks to achieve.
+If you decide to go serverless (e.g., Lambda, DynamoDB), then you offload even more heavy lifting. Everything is essentially scalable and resilient out-of-the-box without having to fuss about it, and even boring concerns like security and patching are out of your hands (you will never have to patch your DynamoDB or Lambda ""servers"" - because you don't have one, and AWS does all of that maintenance for you, invisibly).
+But that powerful advantage - having most things offloaded to the hyperscaler - can sometimes be a disappointing weakness.
+Recently, AWS has made some serverless moves that disappointed me.
+For example, the launch of Aurora Serverless v2, and Neptune Serverless - both of which, strangely, don't actually seem to be serverless in the traditional sense. They don't scale to zero (i.e., you pay a good chunk of money even if your Aurora or Neptune database didn't receive a single query in a billing month), and don't even save you from having to manage a VPC (unlike true serverless offerings like DynamoDB and Lambda, where you could completely not have to worry about VPCs, and shove off all of the related undifferentiated networking and security work to AWS)
+That's just bad stewardship of the serverless brand.
+Worse, even the true serverless offerings aren't safe from bad stewardship. Take Lambda, which was what actually got me started in this rabbit hole of discontent. I heavily use Python Lambdas, and as of this writing (March 2023), Lambda still only supports Python 3.9 as its latest Python runtime.
+This is unacceptable. Without timely support for Python runtimes, this means serverless workloads that need updated Python runtimes have two options:
+Create their own container image and run that custom image in Lambda. This is terrible, because then we end up doing work we wanted to offload to the hyperscaler: managing container images, including creating, testing and patching them.
+Work around limitations in old runtimes. The easiest but still sucky way is to simply try to implement workarounds in old runtimes, or be content to not implement new features that depend on, say, Python 3.10 or up until AWS gets around to supporting them.
+
+The idea of serverless is still the best possible future for mainstream computing. It's unfortunate, though, that stewardship of serverless (both as a brand, and as the resulting concrete services) is undergoing some pretty rough times.
+Problem #2: Serverless offerings aren't solving the ""Kubernetes problem""
+The other major problem I have with serverless has to do with it essentially being still in its early days - it is too focused on developer experience, with very little focus on enterprise experience.
+In other words, serverless as it stands now solves a lot of problems, except the one problem it must solve to actually become the de facto computing paradigm, the ""Kubernetes problem"": How can serverless eventually supplant Kubernetes as the beloved industry standard for workload deployments, from small to Fortune 500 companies?
+The reason Kubernetes is beloved in the enterprise space isn't app portability (i.e., the opposite of vendor lock-in). In fact, in a 2021 survey (links at the end), application portability was ranked at the very bottom of importance by respondents. They didn't want app portability. What they wanted was standardization - being able to standardize skills and tooling, across the entire organization, no matter the underlying platform (on-prem, AWS, Google Cloud, Azure, etc…)
+And this is why serverless isn't going to make inroads against Kubernetes as it stands right now. It's not about lock-in, because, turns out, no one really cares. What actually matters to enterprises is being able to standardize, and serverless right now does an awful job at that. Whereas with Kubernetes, a Fortune 500 company will use Kubernetes (of course, with something like Red Hat OpenShift to actually make Kubernetes enterprise-grade with far less effort) to achieve standardization despite using 2 or 3 public clouds plus their own on-prem data centers, no such technology exists for serverless. You need to work on a completely different stack for each hyperscaler if you wanted to go native serverless.
+The hyperscalers, in effect, are working only on the developer experience, and are mostly doing a good job at it (my earlier rant above notwithstanding). They aren't really working on the Kubernetes problem of serverless, though, and really have no incentive to do so.
+I can't really find a project right now that attempts to solve the Kubernetes problem for serverless. Most projects are targeting the same things that the hyperscalers are - developer experience. I don't think that will be enough. Until this changes, serverless will be stuck in this limbo where it is exciting and valuable and even beloved by a good chunk of developers, but will forever be shut out of the enterprise market, always to be eclipsed by enterprise-grade Kubernetes deployments.
+Wrap up
+Most discussions about the limitations and constraints of serverless almost always boil down to ""lock-in!"". I disagree.
+Serverless has bigger problems than that. While problem #1 in this post is hyperscaler stewardship that I find disappointing and must be addressed, the bigger and more central problem is the second one, the ""Kubernetes problem"" of standardization - solving for the enterprise experience, and not just the developer experience.
+While there are exciting developments in serverless when it comes to solving developer experience, that's not enough for serverless to flourish. Without a huge effort dedicated to the enterprise experience, true serverless will never really make Kubernetes obsolete. We'll all be stuck managing fat, complex Kubernetes clusters for the rest of our days, instead of achieving serverless nirvana. The industry deserves better.
+Links:
+Original Survey: https://juju.is/cloud-native-kubernetes-usage-report-2021#cloud-native-goals-benefits-and-estate-size
+Tech Republic article about the survey above, focusing on Kubernetes: https://www.techrepublic.com/article/kubernetes-magic-is-in-enterprise-standardization-not-app-portability/
+```"
+assistant,"[""Serverless"",""Performance"",""Scalability""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+```
+Cloud Data Governance: Good Policy Paves the Way for Good Data Outcomes
+Decorative image of various representations of data governance behind a blue overlay. Data is the future of business. It’s also the source of an enormous well of anxiety and frustration. Data security and regulatory compliance have to be first principles in any modern organization, but your use of data and your policies governing that use impact your company well beyond liability factors. A quick Google search reveals the depth of customer angst around data collection and usage; your relationship with data is key to your reputation. Trepidation about data governance, in turn, becomes a significant limitation on many companies’ efforts to modernize, constituting a barrier to cloud adoption.  
+
+Because on-prem environments are familiar, some aspects of data governance in those configurations are, as well. When your data’s location is on-site, compliance with regulations like the EU’s GDPR, which ties compliance to data location, seem simpler than a diversified data storage deployment. One of the advantages of cloud—multiple data sites that improve accessibility and resiliency—begins to look like a liability in this light, unless your cloud transformation or modernization is conducted and managed by experts who can help guide your cloud data storage decisions and conduct periodic checks to establish and maintain regulatory compliance. The cloud as a concept can seem nebulous, but the specifics of data storage can, and should, be a closely controlled aspect of your cloud deployment.  
+
+While compliance can be an intimidating aspect of cloud data governance, it only represents one aspect of your data governance program. Data security concerns can also serve as barriers to cloud adoption. But as we discussed in a recent post, your data is likely to be more secure in a well-built cloud than on-prem, with cloud native features like advanced access controls letting only the right people in, automation reducing the human error that accounts for the vast majority of security breaches, and a DevSecOps approach to prioritize security throughout development and operations processes.  
+
+Other key areas of data governance, such as availability, usability, and consistency, are dramatically improved in the cloud. Built-in redundancy across virtualized servers assures failover and eliminates outages driven by natural disasters or other geographically-specific events. Sophisticated remote work and access management tools allow your teams to access and use data from anywhere, in real time, in any time zone. Composability allows changes in applications that access and process data without impacting the data itself or other apps along the way. And because cloud vendors offer scalable, practically unlimited data storage and analytics options, you can do more with your data in the cloud than in any other type of deployment.  
+
+The most important consideration of data governance, regardless of your data’s location or usage, is building a coherent, comprehensive policy that is flexible and aligned to your business’s goals and principles. Gartner recommends a model built on seven key foundations for data and analytics governance, constructed around your values and outcomes, and emphasizes adaptability to allow you to incorporate new data scenarios as they arise. AWS, Azure, and GCP offer data governance guidance and tools, as well. Avoiding multi-cloud deployments, which considerably complicate cloud governance, and partnering with a managed service provider that offers advanced monitoring and compliance reporting also help simplify the process. All of this should come together to protect your investment in your data program and allow you to maximize its impact for your operations and your customers. 
+
+Whatever data governance policy and process work best for your business, data governance concerns don’t have to keep you out of the cloud. With careful consideration and expert guidance, your data can do more, while staying safe and performing as a function of your business goals and values.
+```  "
+assistant,"[""Security"", ""Governance"", ""Monitoring""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+```
+Amazon DynamoDB: What It Is and 10 Things You Should Know
+Amazon DynamoDB - Cloud Academy
+What is Amazon DynamoDB?Amazon DynamoDB is a managed NoSQL service with strong consistency and predictable performance that shields users from the complexities of manual setup.NoSQL vs SQL DatabasesWhether or not you’ve actually used a NoSQL data store yourself, it’s probably a good idea to make sure you fully understand the key design differences between NoSQL (including Amazon DynamoDB) and the more traditional relational database (or “SQL”) systems like MySQL.First of all, NoSQL does not stand for “Not SQL“, but “Not Only SQL“. The two are not opposites, but complementary. NoSQL designs deliver faster data operations and can seem more intuitive, while not necessarily adhering to the ACID (atomicity, consistency, isolation, and durability) properties of a relational database.There are many well-known NoSQL databases available, including MongoDB, Cassandra, HBase, Redis, Amazon DynamoDB, and Riak. Each of these was built for a specific range of uses and will therefore offer different features. We could group these databases into the following categories: columnar (Cassandra, HBase), key-value store (DynamoDB, Riak), document-store (MongoDB, CouchDB), and graph (Neo4j, OrientDB).In this post, I’m going to focus on AWS DynamoDB — the giant of the NoSQL world. I believe it’s become a giant because AWS built it for their own operations. Considering how much was at stake financially, anything less than complete reliability would simply not be tolerated. Software created in such a demanding environment and with the use of AWS-scale resources is bound to be epic. The result? Fantastic reliability and durability, with blazing fast service.Like any other AWS product, Amazon DynamoDB was designed for failure (i.e., it has self-recovery and resilience built in). That makes DynamoDB a highly available, scalable, and distributed data store. Here are ten DynamoDB features that helped make this database service into a giant.1. Amazon DynamoDB is a managed, NoSQL database serviceWith a managed service, users only interact with the running application itself. You don’t need to worry about things like server health, storage, and network connectivity. With Amazon DynamoDB, AWS provisions and runs the infrastructure for you. Some of DynamoDB’s critical managed infrastructure features include:Automatic data replication over three availability-zones in a single region.Infinitely scalable read-write I/O running on IOPS-optimized solid state drives.A provisioned-throughput model where read and write units can be adjusted at any time based on actual application usage.Data backed up to S3.Integrated with other AWS services like Elastic MapReduce (Amazon EMR), Data Pipeline, and Amazon Kinesis.Amazon DynamoDB pricing: Pay-per-use model – you never pay for hardware or services you’re not actually using.Security and access control can be applied using AWS IAM service.Great enterprise-ready features such as a robust SLA, monitoring tools, and private VPN functionality.2. Amazon DynamoDB has Predictable PerformanceAWS claims that DynamoDB will deliver highly predictable performance. Considering Amazon’s reputation for service delivery, we tend to take them at their word on this one. You can actually control the quality of the service you’ll get by choosing between Strong Consistency (Read-after-Write) or Eventual Consistency. Similarly, if a user wants to increase or decrease the Read/Write throughput they’ll experience, they can do it through simple API calls. Amazon DynamoDB also offers what they call Provisioned Capacity: briefly, DynamoDB allows you to “bank” up to five minutes of unused capacity, which, like the funds in an emergency bank account, you can use during short bursts of activity.3. Amazon DynamoDB is designed for massive scalabilityBeing an AWS product, you can assume that Amazon DynamoDB will be extremely scalable. With their automatic partitioning model, as data volumes grow, DynamoDB spreads the data across partitions and raises throughput. This requires no intervention from the user.4. Amazon DynamoDB data typesDynamoDB supports the following data types:Scalar – Number, String, Binary, Boolean, and Null.Multi-valued – String Set, Number Set, and Binary Set.Document – List and Map.Scalar types are generally well understood. We’ll focus instead on multi-valued and document types. Multi-valued types are sets, which means that the values in this data type are unique. For a months attribute you can choose a String Set with the names of all twelve months – each of which is, of course, unique.Similarly, document types are meant for representing complex data structures in the form of Lists and Maps. See this example:
+{
+   Id = 100
+   ProductName = ""K3 Note""
+   Description = ""5.5 inches screen, 4G LTE,octa-core processor, 2GB RAM and 16 GB ROM""
+   MobileType = ""Touch""
+   Brand = ""Lenovo""
+   Price = 100
+   Color = [ ""White"", ""Black"" ]
+   ProductCategory = ""Mobile""
+}
+5. Amazon DynamoDB’s Data ModelDynamoDB uses three basic data model units, Tables, Items, and Attributes. Tables are collections of Items, and Items are collections of Attributes.Amazon DynamoDB attributes are basic units of information, like key-value pairs. Tables are like tables in relational databases, except that in DynamoDB, tables do not have fixed schemas associated with them. Items are like rows in an RDBMS table, except that DynamoDB requires a Primary Key. The Primary Key in DynamoDB must be unique so that it can find the exact item in the table. DynamoDB keys supports two kinds of Primary Keys:Hash Type Primary Key: If an attribute uniquely identifies an item, it can be considered as Primary. DynamoDB builds a hash index on the attribute to facilitate the uniqueness. A Hash Key is mandatory in a DynamoDB table.Hash and Range Type Primary Key: This type of Primary Key is built upon the hashed key and the range key in the table: a hashed index on the hash primary key attribute, and a range sort index on the range primary key attribute. This type of primary key allows for AWS’s rich query capabilities.6. Amazon DynamoDB indexesThere are two types of indexes in DynamoDB, a Local Secondary Index (LSI) and a Global Secondary Index (GSI). In an LSI, a range key is mandatory, while for a GSI you can have either a hash key or a hash+range key. GSIs span multiple partitions and are placed in separate tables. DynamoDB supports up to five GSIs. While creating a GSI, you need to carefully choose your hash key because that key will be used for partitioning.Which is the right index type to use? Here are two considerations: LSIs limit item size to 10 GB, and GSIs offer only eventual consistency.7. Amazon DynamoDB partitionsIn DynamoDB, data is partitioned automatically by its hash key. That’s why you will need to choose a hash key if you’re implementing a GSI. The partitioning logic depends upon two things: table size and throughput.
+Amazon DynamoDB partitions
+Amazon DynamoDB - calcThe partition for a table is calculated by DynamoDB. Although it is transparent to users, you should understand the logic behind this.
+
+(Note: Read Capacity Units – RCU – are measured in 4KB/sec. Write Capacity Units – WCU – are measured in 1KB/sec.)
+According to this formula, if we have a table size of 16 GB and we have 6000 RCUs and 1000 WCUs, then:# of partitions by throughput: 6000/3000+1000/1000 = 3# of partitions by size: 16/10 = 1.6So, the # of partitions in total: max(1.6, 3) = 3Therefore, we will require three partitions. The RCUs and WCUs will be uniformly distributed across the partitions. Here, RCUs per partition will be 3000/3 = 1000. RCUs and the WCUs will be 1000/3 = 333 WCUs. The data per partition will be 16/3 = 5.4 GB per partitions.8. Amazon DynamoDB streamsDynamoDB streams are like transactional logs for a table. According to the DynamoDB Developer’s Guide:A DynamoDB stream is an ordered flow of information about changes to items in an Amazon DynamoDB table. When you enable a stream on a table, DynamoDB captures information about every modification to data items in the table.Streams are applied only to tables, and each stream record appears exactly once in a stream. AWS maintains separate endpoints for DynamoDB and DynamoDB streams. There are all kinds of scenarios where streams can be useful, such as in a messaging application where a message or picture that is updated to a group must be reflected in the message boxes of all the group members, 0r for sending welcome messages to new customers when they sign up for your service.9. Amazon DynamoDB integration with Amazon EMR and RedshiftNoSQL and Big Data technologies are often discussed together, because they both share the same distributed and horizontally scalable architecture, and both aim to provide high volume, structured, and semi-structured data processing. In a typical scenario, Elastic MapReduce (EMR) performs its complex analysis on datasets stored on DynamoDB. Users will often also use AWS Redshift for data warehousing, where BI tasks are carried out on data loaded from DynamoDB tables to Redshift.10. Amazon DynamoDB JavaScript Web ShellAWS has introduced a web-based user interface known as the DynamoDB JavaScript Shell for local development. You can download the tool here.Steps:Download and extract the appropriate fileRun following command:
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar
+DynamoDB CliAccess the console in a browser with the URL: http://localhost:8000/shellThe web page will look like this:
+Amazon DynamoDB interface
+Click on the button to get some sample commands 5For example the createTable API will run:
+Amazon DynamoDB - createTable API
+After running this, listTables will show you:
+Amazon DynamoDB - listTables
+
+This is a great tool to perform syntax checking before actually going to production.With DynamoDB, Amazon has done a great job providing a NoSQL service with strong consistency and predictable performance, while saving users from the complexities of a distributed system. One proof of their success is the many systems (like Riak) that chose to build on the DynamoDB design. With a strong ecosystem, Amazon DynamoDB is something to consider when you are building your next Internet-based scale application.Ready to try it for yourself? Why not use Cloud Academy’s AWS DynamoDB hands-on lab?
+```"
+assistant,"[""DynamoDB"", ""Scalability"", ""Performance""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+``` 
+Cloud migration can be complicated, especially when a company has insufficient cloud expertise or does not have enough manpower to set up a cloud environment correctly and effectively. In addition, an environment can contain hundreds of accounts (AWS) or subscriptions (Azure), making its management awkward. The cloud landing zone is used to solve this problem quickly. But what is a cloud landing zone, and why do companies need it? Let’s find the answers below.
+
+What Is A Cloud Landing Zone?
+In simple words, a cloud landing zone is a cloud adoption framework, by using that organizations can perform large-scale cloud migration in an efficient and streamlined manner. The benefit of a cloud landing zone is that a number of parameters are established initially, which determine how applications and data are used in a cloud environment. A cloud environment with a landing zone is created automatically while following best practices in the areas of security and compliance.
+
+For example, you can set up guardrails concerning the compliance or rights of users. A setting like this can be made in such a way that specific datasets are accessible only to certain departments or to users with specific privileges of access. Your cloud migration takes very little time since such protocols and roles are predefined within the cloud landing-zone environment.
+
+A landing zone is prepared differently for each organization. Each company uses different applications, has to meet different compliance requirements, and operates with its specific IT infrastructure. Therefore, organizations need to set up the landing zone accurately from the start to achieve the bespoke solution that requires the necessary expertise. For this, organizations are required to collaborate with the cloud providers that have this expertise in-house.
+
+Cloud Landing Zone Lifecycle (Day 0/Day 1/Day 2)
+Everyone wants to ‘go-to-the-cloud,’ but the road to the cloud is not always clear. That you don’t move to the cloud in the dark or get blindfolded with too much information, build a cohesive strategy first. You can build a strategy that works for your business by giving attention to the cloud landing zone lifecycle. The lifecycle of a cloud landing zone revolves around three factors such as:
+
+Design
+Deployment
+Operations
+Here is a brief description of each three factors that help us understand their importance in building the right cloud landing zone strategy.
+
+Design (Day 0)
+As landing zones put the foundation for cloud environment, it is important that you think well and strategize all requirements before stepping into the cloud journey such as security & compliance, workload management, performance, identity and access management, networking & configurations, high availability as well as cost optimization. You can spend Day 0 deciding and creating a roadmap to avoid hazards that may show up on your cloud journey, hamper your efforts and make it tough to roll back.
+
+Deployment (Day 1)
+Once you are done collecting and creating design and specifications, use Day 1 to decide your cloud landing zone deployment to CSP. Every CSP (cloud service provider) handles the landing zone concept differently as their cloud adoption framework. Based on your specific business needs, you can select cloud landing zone services provided by top vendors such as AWS, Azure, and GCP.
+
+Operations (Day 2)
+Cloud environments are continuously evolving. That means ongoing effort needs to be put into the management and operations of the established cloud landing zones. With time when all aspects of cloud environments evolve, you must keep landing zones well-maintained and updated based on cloud providers’ best practices by using innovative tools. Adopting the AWS Control Tower for your landing zone management presents a good example of it. The AWS Control Tower is now operational and available for use for AWS users.
+
+Why Does A Company Need Cloud Landing Zone Adoption?
+A company could avail of many advantages of adopting a cloud landing zone. As a cloud adoption framework, it helps you evaluate where you are in your path to the cloud world and strategies to get there. It guides you through a framework to utilize as the cornerstone for your transition to the cloud. It allows identifying critical actions and goals that will consistently enhance your cloud journey. Here are some of the ways landing zone helps you beyond developing a cloud migration strategy or cloud adoption journey, including:
+
+1. Compliant With Cloud Architecture Policy
+Given that established parameters apply, developers operate within a well-defined field. This means that companies do not risk developing cloud environments that differ from their compliance policy. Similarly, the IT manager is less concerned about compliance as it is embedded in the foundation of the IT infrastructure.
+
+2. Speed ​​And Scalability
+As mentioned above, cloud migration can happen very quickly with the help of the landing zone. Preparation time is significantly reduced: while this used to take at least a day, the time is cut down to a few minutes with the landing zone. This leads to considerable cost savings as well as a shorter time-to-market for new applications, resulting in a more quickly and more efficiently establishing of DevOps processes. Another key feature inherent in landing zones is scalability, as it is easy to expand to new environments. It allows the development of standard profiles easily for new users.
+
+3. Security And Compliance
+Thanks to guardrails, compliance is an integral part of a landing zone, meaning developers and engineers can safely operate in a landing-zone environment and in observance of compliance regulations. What’s more, organizations don’t spend that much time implementing complex rules within their public cloud, and the risk of shadow IT is substantially reduced. This especially applies to the operational phase. But it doesn’t stop with a one-off setting of the environment. It is also about keeping all environments up to date in an ongoing and consistent way.
+
+4. Flexibility
+A landing zone stands for high-degree standardization, which means that engineers only work with environments that others have developed. In addition, a good landing zone is API-driven to simplify the implementation of new applications. This flexibility saves time when the landing-zone environment is scaled up or extended.
+
+5. A Better Understanding Of Costs
+Organizations quickly lose control of their cloud expenses because they don’t have a clear overview of the solutions being used and their costs. The landing zone provides a framework within which engineers are free to develop new initiatives without incurring unexpected and unnecessary expenses. Furthermore, the process can be set up in such a way that each account/subscription is visible. This avoids situations in which accounts remain under the radar, hence better cost optimization.
+
+6. Standardized Tenancy For Multi-Account?
+In a multi-tenant architecture, standardizing tenancy allows you to enforce tagging policies to a group of users. It helps you set up different security profiles and share access to the software instances with users having specific privileges.
+
+Who Should Be Using Cloud Landing Zone?
+The benefits of the landing zone are many. But which landing zone offers the most potential to developers, and which organizations make the most of it? Two aspects play a significant role when it comes to answering this question.
+
+The first thing to consider is an organization’s current cloud environment. It is primarily developers working with organizations that do not understand their cloud spending, or where there is no transparent model for DevOps at hand or insufficient central IT architecture, who can benefit from a landing zone.
+
+Speed ​​also plays an important role. Due to the short migration time, the possibility of quickly deploying new applications in landing-zone environments, faster time-to-market for new applications, and optimization of DevOps processes, a cloud landing zone is a solution for developers working in organizations where speed does matter. And changes like scaling up or new employees can also be assimilated quickly and efficiently to landing zone intelligence.
+
+Conclusion
+The cloud landing zone provides a well-defined operating model that helps organizations improve the quality and speed of service delivery. Whether you want to speed up your cloud migration or first time trying cloud for your business, a landing zone provides you the right cloud foundation by providing you complete control on cost while increasing network resilience and enhanced governance.
+```"
+assistant,"[""Landing Zone"", ""Scalability"", ""Governance""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics
+ARTICLE TEXT:
+``` 
+What is serverless computing?
+Serverless computing is a method of providing backend services on an as-used basis. A serverless provider allows users to write and deploy code without the hassle of worrying about the underlying infrastructure. A company that gets backend services from a serverless vendor is charged based on their computation and do not have to reserve and pay for a fixed amount of bandwidth or number of servers, as the service is auto-scaling. Note that despite the name serverless, physical servers are still used but developers do not need to be aware of them.
+
+In the early days of the web, anyone who wanted to build a web application had to own the physical hardware required to run a server, which is a cumbersome and expensive undertaking.
+
+Then came cloud computing, where fixed numbers of servers or amounts of server space could be rented remotely. Developers and companies who rent these fixed units of server space generally over-purchase to ensure that a spike in traffic or activity will not exceed their monthly limits and break their applications. This means that much of the server space that gets paid for can go to waste. Cloud vendors have introduced auto-scaling models to address the issue, but even with auto-scaling an unwanted spike in activity, such as a DDoS Attack, could end up being very expensive.
+
+Benefits of Serverless
+Serverless computing allows developers to purchase backend services on a flexible ‘pay-as-you-go’ basis, meaning that developers only have to pay for the services they use. This is like switching from a cell phone data plan with a monthly fixed limit, to one that only charges for each byte of data that actually gets used.
+
+The term ‘serverless’ is somewhat misleading, as there are still servers providing these backend services, but all of the server space and infrastructure concerns are handled by the vendor. Serverless means that the developers can do their work without having to worry about servers at all.
+
+What are backend services? What’s the difference between frontend and backend?
+Application development is generally split into two realms: the frontend and the backend. The frontend is the part of the application that users see and interact with, such as the visual layout. The backend is the part that the user doesn’t see; this includes the server where the application's files live and the database where user data and business logic is persisted.
+
+Frontend vs Backend of an Application
+For example, let’s imagine a website that sells concert tickets. When a user types a website address into the browser window, the browser sends a request to the backend server, which responds with the website data. The user will then see the frontend of the website, which can include content such as text, images, and form fields for the user to fill out. The user can then interact with one of the form fields on the frontend to search for their favorite musical act. When the user clicks on ‘submit’, this will trigger another request to the backend. The backend code checks its database to see if a performer with this name exists, and if so, when they will be playing next, and how many tickets are available. The backend will then pass that data back to the frontend, and the frontend will display the results in a way that makes sense to the user. Similarly, when the user creates an account and enters financial information to buy the tickets, another back-and-forth communication between the frontend and backend will occur.
+
+What kind of backend services can serverless computing provide?
+Most serverless providers offer database and storage services to their customers, and many also have Function-as-a-Service (FaaS) platforms, like Cloudflare Workers. FaaS allows developers to execute small pieces of code on the network edge. With FaaS, developers can build a modular architecture, making a codebase that is more scalable without having to spend resources on maintaining the underlying backend. Learn more about FaaS >>
+
+What are the advantages of serverless computing?
+Lower costs - Serverless computing is generally very cost-effective, as traditional cloud providers of backend services (server allocation) often result in the user paying for unused space or idle CPU time.
+Simplified scalability - Developers using serverless architecture don’t have to worry about policies to scale up their code. The serverless vendor handles all of the scaling on demand.
+Simplified backend code - With FaaS, developers can create simple functions that independently perform a single purpose, like making an API call.
+Quicker turnaround - Serverless architecture can significantly cut time to market. Instead of needing a complicated deploy process to roll out bug fixes and new features, developers can add and modify code on a piecemeal basis.
+Learn more about the benefits of serverless computing.
+
+How does serverless compare to other cloud backend models?
+A couple of technologies that are often conflated with serverless computing are Backend-as-a-Service and Platform-as-a-Service. Although they share similarities, these models do not necessarily meet the requirements of serverless.
+
+Backend-as-a-service (BaaS) is a service model where a cloud provider offers backend services such as data storage, so that developers can focus on writing front-end code. But while serverless applications are event-driven and run on the edge, BaaS applications may not meet either of these requirements. Learn more about BaaS >>
+
+Platform-as-a-service (PaaS) is a model where developers essentially rent all the necessary tools to develop and deploy applications from a cloud provider, including things like operating systems and middleware. However PaaS applications are not as easily scalable as serverless applications. PaaS also don’t necessarily run on the edge and often have a noticeable startup delay that isn’t present in serverless applications. Learn more about PaaS >>
+
+Infrastructure-as-a-service (IaaS) is a catchall term for cloud vendors hosting infrastructure on behalf of their customers. IaaS providers may offer serverless functionality, but the terms are not synonymous. Learn more about IaaS >>
+
+What is next for serverless?
+Serverless computing continues to evolve as serverless providers come up with solutions to overcome some of its drawbacks. One of these drawbacks is cold starts.
+
+Typically when a particular serverless function has not been called in a while, the provider shuts down the function to save energy and avoid over-provisioning. The next time a user runs an application that calls that function, the serverless provider will have to spin it up fresh and start hosting that function again. This startup time adds significant latency, which is known as a ‘cold start’.
+
+Once the function is up and running it will be served much more rapidly on subsequent requests (warm starts), but if the function is not requested again for a while, the function will once again go dormant. This means the next user to request that function will experience a cold start. Up until fairly recently, cold starts were considered a necessary trade-off of using serverless functions.
+
+Cloudflare Workers has addressed this problem by spinning up serverless functions in advance, during the TLS handshake. Since Workers functions spin up at the edge in a very short amount of time, even shorter than the time required to complete the handshake, the result is an FaaS platform with zero cold starts. To get started with Cloudflare Workers, see our Developer documentation.
+
+As more and more of the drawbacks of using serverless get addressed and the popularity of edge computing grows, we can expect to see serverless architecture becoming more widespread.
+```"
+assistant,"[""Serverless"", ""Performance"", ""Scalability""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics 
+ARTICLE TEXT:
+``` 
+AWS Control Tower is an AWS solution that simplifies the management of multi-account AWS installations. Although it provides default configurations to create a landing zone, customizing it is still essential to meet specific organizational requirements. Organizations can tailor access controls, organizational structures, and resource provisioning processes.
+
+This article explores different ways to customize the landing zone, enabling organizations to optimize the benefits of AWS Control Tower and create a specialized environment that aligns with their unique needs. Customizing the landing zone allows businesses to improve management, security, and compliance within their AWS environment.
+
+Customizations from AWS Control Tower Console
+These are customizations from the AWS Control Tower console:
+
+OU Names – During setup, you can change the OU Names. You can even change the OU names after a setup from AWS Organizations.
+Audit and Log Archive Accounts – You can customize the shared account names during setup. However, you won’t be allowed to change afterward.
+AWS Regions – You can select or deselect regions during the setup or update of the landing zone. Choosing will allow the AWS Control Tower to govern those regions.
+Optional Controls – You can decide whether to enable optional controls after setup. You can customize the level of enforcement for OUs by selecting which controls to enable.
+AWS CloudTrail trails – Organizational CloudTrail trails run by AWS Control Tower can be opted in or out. Select Opt-in if you want AWS Control Tower to create and manage a CloudTrail trail at the organizational level on your behalf. Select Opt-out if you will control logging using your own CloudTrail trails or a third-party logging solution.
+Member Account – you can customize member accounts from the console using Account Factory Customization (AFC).
+Account Factory Customization (AFC)
+AWS Control Tower Account Factory automates the provisioning and management of accounts. It helps to create accounts with an initial security setup. However, the customizations of AWS accounts are challenging, trying to maintain the customization process throughout all the AWS accounts. The challenge of creating repeatable account configurations and implementing them consistently at scale always becomes a problem later on.
+
+Hence in this article, we will introduce Account Factory Customization to help Cloud Operations teams have a simplified and repeatable process for applying custom configurations to newly vended and existing AWS accounts.
+
+Account Factory Customization uses AWS Control Tower and AWS Service Catalog. A blueprint must be created first. A blueprint is a product from Service Catalog created from a Cloudformation template.
+
+Customizing your AWS Control Tower Landing Zone
+After creating a blueprint, you can now import the blueprint to the AWS Control Tower Account Factory customization settings. You can do this during new AWS account creation or updating. These customizations will then be automatically deployed to the account. Using AWS Tower Console, we can now implement customizations consistently to all the AWS accounts under Account Factory.
+
+Customizing your AWS Control Tower Landing Zone
+Customizations for AWS Control Tower (CfCT)
+Customizations for AWS Control Tower (CfCT) were introduced to provide more thorough customizations for your landing zone. CfCT is a set of tools that enables you to customize your landing zone in greater detail than you can with the AWS Control Tower console. AWS CloudFormation templates and service control policies (SCPs) are used to implement these customizations. The AWS Control Tower lifecycle events are connected with this CfCT functionality to keep your resource deployments in sync with your landing zone.
+
+CfCT Architecture
+Customizing your AWS Control Tower Landing Zone
+AWS Provides a Cloudformation template that builds the Customizations for Control Tower(CfCT). This template will create an AWS CodePipeline to deploy stack sets or SCPs to OUs or accounts. You must deploy this template to the management account first.
+
+CfCT Deploy Workflows
+AWS CodePipeline Workflow – Changes from the configuration package will trigger the pipeline for this workflow. It can be a zipped uploaded package from S3(default) or a committed package from CodeCommit.
+
+A configuration package contains:
+
+Manifest file – is the configuration file that will become the pipeline reference to what templates or JSON policy need to deploy, onto which OUs or accounts, and whether to deploy resources or SCPs.
+Set of templates
+JSON Files
+The pipeline has a build stage to validate the templates and manifest files. Then a state machine will invoke AWS Organizations API to create Service Control Policy and AWS Cloudformation to deploy the stacksets.
+
+AWS Control Tower Lifecycle Event Workflow – This workflow is an extension of the AWS CodePipeline workflow to allow triggering based on the AWS Control Tower Lifecycle Events. It consists of an Amazon EventBridge rule, Amazon Simple Queue Service (Amazon SQS) first-in-first-out (FIFO) queue, and an AWS Lambda function. The Amazon EventBridge rule will detect the AWS Control Tower Lifecycle Event, pass it to Amazon SQS FIFO Queue, and invoke a Lambda function that runs the AWS CodePipeline Workflow.
+
+Account Factory for Terraform (AFT)
+AFT is a Terraform module maintained by AWS that allows automated provisioning and customization of new accounts. This module will deploy a pipeline of AWS services that helps you manage AWS Control Tower Accounts through Terraform configuration.
+
+AFT Workflow
+Customizing your AWS Control Tower Landing Zone
+AFT starts with submitting a new account request/s in the pipeline. This request will be queued first in a SQS FIFO Queue. This is one of the benefits of using AFT aside from flexibility. You can create multiple requests. Although this will not speed up the process, it helps that you don’t need to wait for a previous request to finish.
+The new SQS message will trigger a lambda that will kick off the account vending process in the AWS Control Tower.
+Upon account creation, a lambda will invoke a state machine that will provision an account-specific pipeline.
+The newly created pipeline will run the global customizations stage and account-level customizations subsequently.
+There are two levels of customization:
+
+Global level – customization to all of the accounts.
+
+Account level – can be an AWS account or a group of AWS accounts, depending on what you have predetermined.  
+
+To apply customizations to existing accounts created from AFT. The user must invoke customization requests from Customization Invocation State Machine. Any push in customizations repositories will not run the account-specific pipeline. However, you can manually execute the state machine to run the account-specific pipeline.
+
+Customizing Your AWS Control Tower Landing Zone by Integrating Security Hub
+AWS Control Tower is a powerful service that provides organizations with a centralized and automated way to set up and govern multiple AWS accounts. By integrating AWS Control Tower with Security Hub and leveraging the CIS Benchmarks for AWS Foundations, you can significantly enhance the security and compliance of your AWS environment. This integration allows for streamlined security operations, centralized security monitoring, and adherence to industry best practices.
+
+A global community of security experts has developed the Center for Internet Security (CIS) AWS Foundations standard, including public and private sector organizations. The CIS Benchmarks offer a comprehensive and robust set of security controls and recommendations specifically for AWS environments. While other AWS standards available in Security Hub, such as AWS Foundational Security Best Practices, also offer valuable security insights, the CIS AWS Foundations Benchmark provides a comprehensive and detailed framework widely recognized and respected in the industry.
+
+When using AWS Control Tower, you have multiple options for managing Security Hub and other security-related services. One approach is to delegate an account as the central administrator for Security Hub. This account is responsible for configuring Security Hub settings, including enabling standards like CIS AWS Foundations Benchmark and monitoring the security posture of the member accounts.
+
+By configuring permission sets in AWS IAM Identity Center (AWS Single Sign-On) and assigning them to the Security Hub administrator account, you can grant specific permissions to the security team for managing Security Hub in the administrator account.
+
+The auto-enable feature in Security Hub ensures that Security Hub is automatically enabled for all existing and future member accounts within the AWS Control Tower environment, allowing you to enforce a consistent security posture across the organization.
+
+Customizing your AWS Control Tower Landing Zone
+Conclusion:
+In conclusion, customizing your AWS Control Tower Landing Zone provides significant benefits for organizations looking to optimize their cloud infrastructure. This article highlights various customization options, all of which empower businesses to align their cloud environment with their unique needs. Furthermore, the flexibility offered by AWS Control Tower allows organizations to adapt and scale their Landing Zone as their cloud infrastructure evolves. Overall, customizing the AWS Control Tower Landing Zone enables businesses to maximize the value of their cloud investment while maintaining a secure and compliant environment.
+```"
+assistant,"[""Control Tower"", ""Landing Zone"", ""Security""]"
+system,"Given an article text delimited with triple back-ticks, analyze the article and identify three tags that best summarize its main topics. These tags should reflect the key technologies, concepts, and themes covered in the article. 
+
+Adhere to these steps for consistency and accuracy:
+- If the article mentions several technologies or themes, focus on those that are central to the main argument or purpose of the article.
+- If a technology or theme is mentioned in multiple significant contexts, it should be considered more relevant.
+- Avoid selecting tags that are only briefly mentioned or not central to the article's main points. 
+- Only choose from the list of possible tags provided below:
+LIST OF POSSIBLE TAGS:
+Serverless, Landing Zone, RDS, DynamoDB, Lambda, Control Tower, Multi-AZ, Read Replica, Disaster Recovery, Data Modeling, Performance, Scalability, Cost Optimization, Security, Governance, Observability, Monitoring, DevOps, Machine Learning, Artificial Intelligence, Software Development
+OUTPUT FORMAT:
+- LIST OF TAGS: List the 3 most relevant tags in a simple JSON array.
+
+"
+user,"Analyze the article and identify three tags that best summarize its main topics 
+ARTICLE TEXT:
+``` 
+Security in Amazon RDS
+
+Cloud security at AWS is the highest priority. As an AWS customer, you benefit from a data center and network architecture that are built to meet the requirements of the most security-sensitive organizations.
+
+Security is a shared responsibility between AWS and you. The shared responsibility model describes this as security of the cloud and security in the cloud:
+
+Security of the cloud – AWS is responsible for protecting the infrastructure that runs AWS services in the AWS Cloud. AWS also provides you with services that you can use securely. Third-party auditors regularly test and verify the effectiveness of our security as part of the AWS compliance programs. To learn about the compliance programs that apply to Amazon RDS, see AWS services in scope by compliance program.
+
+Security in the cloud – Your responsibility is determined by the AWS service that you use. You are also responsible for other factors including the sensitivity of your data, your organization's requirements, and applicable laws and regulations.
+
+This documentation helps you understand how to apply the shared responsibility model when using Amazon RDS. The following topics show you how to configure Amazon RDS to meet your security and compliance objectives. You also learn how to use other AWS services that help you monitor and secure your Amazon RDS resources.
+
+You can manage access to your Amazon RDS resources and your databases on a DB instance. The method you use to manage access depends on what type of task the user needs to perform with Amazon RDS:
+
+Run your DB instance in a virtual private cloud (VPC) based on the Amazon VPC service for the greatest possible network access control. For more information about creating a DB instance in a VPC, see Amazon VPC VPCs and Amazon RDS.
+
+Use AWS Identity and Access Management (IAM) policies to assign permissions that determine who is allowed to manage Amazon RDS resources. For example, you can use IAM to determine who is allowed to create, describe, modify, and delete DB instances, tag resources, or modify security groups.
+
+Use security groups to control what IP addresses or Amazon EC2 instances can connect to your databases on a DB instance. When you first create a DB instance, its firewall prevents any database access except through rules specified by an associated security group.
+
+Use Secure Socket Layer (SSL) or Transport Layer Security (TLS) connections with DB instances running the MySQL, MariaDB, PostgreSQL, Oracle, or Microsoft SQL Server database engines. For more information on using SSL/TLS with a DB instance, see Using SSL/TLS to encrypt a connection to a DB instance.
+
+Use Amazon RDS encryption to secure your DB instances and snapshots at rest. Amazon RDS encryption uses the industry standard AES-256 encryption algorithm to encrypt your data on the server that hosts your DB instance. For more information, see Encrypting Amazon RDS resources.
+
+Use network encryption and transparent data encryption with Oracle DB instances; for more information, see Oracle native network encryption and Oracle Transparent Data Encryption
+
+Use the security features of your DB engine to control who can log in to the databases on a DB instance. These features work just as if the database was on your local network.
+```"
+assistant," [""RDS"", ""Security"", ""Governance”]"
