@@ -3,7 +3,7 @@ import tiktoken # for token counting
 import numpy as np
 from collections import defaultdict
 
-data_path = "FT_data/openai_training_data.jsonl"
+data_path = "./OpenAI/senti_training_dataset.jsonl"
 
 # Load the dataset
 with open(data_path, 'r', encoding='utf-8') as f:

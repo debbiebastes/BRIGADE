@@ -1,0 +1,197 @@
+role,content
+system,"Your task is to identify the sentiment of a product review. Here is an example of a product review from a customer, along with the corresponding sentiment analysis of the review:
+
+Example #1:
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Zen End Table
+Review text: 
+```
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+{
+    ""Product name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Quality not up to par"",
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Craftsmanship not as expected for the price""
+    ]
+}"
+user,"Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Kyoto Blossom Lounge Chair
+    Review text: 
+    ```
+The Kyoto Blossom Lounge Chair is stylish and comfortable. However, the assembly was a bit tricky and the fabric started to show signs of wear after a few months of use. It's a decent chair for the price, but I expected better quality.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:"
+assistant,"{
+    ""Product name"": ""Kyoto Blossom Lounge Chair"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Stylish"",
+        ""Comfortable"",
+        ""Decent for the price""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was a bit tricky"",
+        ""Fabric started to show signs of wear after a few months"",
+        ""Expected better quality for the price""
+    ]
+}"
+system,"Your task is to identify the sentiment of a product review. Here is an example of a product review from a customer, along with the corresponding sentiment analysis of the review:
+
+Example #1:
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Zen End Table
+Review text: 
+```
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+{
+    ""Product name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Quality not up to par"",
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Craftsmanship not as expected for the price""
+    ]
+}"
+user,"Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: CompactPro Screwdriver
+    Review text: 
+    ```
+Great screwdriver
+I've been using this for mostly electrical type work where this works great. The ratcheting makes it easy to figure out when not to overtighten so that faceplates don't get cracked. It makes unscrewing a breeze as well. The special bits that are included are also nice including the Robertson one.
+
+Minor issues I've noticed are that sometimes bits fall out randomly when taking one out and the hex bits not being security (why?). Otherwise no real issues.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:"
+assistant,"{
+    ""Product name"": ""CompactPro Screwdriver"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Works great for electrical type work"",
+        ""Ratcheting mechanism helps prevent overtightening"",
+        ""Makes unscrewing easy"",
+        ""Includes special bits, including a Robertson bit""
+    ],
+    ""Negative comments about the product"": [
+        ""Bits sometimes fall out randomly when changing them"",
+        ""Concern about hex bits not being secured""
+    ]
+}"
+system,"Your task is to identify the sentiment of a product review. Here is an example of a product review from a customer, along with the corresponding sentiment analysis of the review:
+
+Example #1:
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Zen End Table
+Review text: 
+```
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+{
+    ""Product name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Quality not up to par"",
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Craftsmanship not as expected for the price""
+    ]
+}"
+user,"Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Echo Dot
+Review text:   
+```
+I don’t think I use all the benefits my echo dot has but I love great quality sound, I love Alexa🤭
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:"
+assistant,"{
+    ""Product name"": ""Echo Dot"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Great quality sound"",
+        ""Love for Alexa""
+    ],
+    ""Negative comments about the product"": []
+}"
