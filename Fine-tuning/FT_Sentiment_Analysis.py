@@ -10,22 +10,22 @@ _ = load_dotenv(find_dotenv()) # read local .env file
 
 client = OpenAI()
 
-#model="ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ"
+#model="ft:gpt-3.5-turbo-1106:personal::8LPZfKpe"
 #model="gpt-3.5-turbo-1106"
 #model="gpt-4-1106-preview"
 
 
-def call_ai(prompt, model="ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ"):
-    system_message = """
-        The response should be in JSON format with the following elements:
-            - Product name
-            - Review Sentiment (Positive/Negative/Neutral)
-            - Positive comments about the product (Enumerate)
-            - Negative comments about the product (Enumerate)
-    """
+def call_ai(prompt, model="gpt-3.5-turbo-1106"):
+    # system_message = """
+    # "Your task is to identify the sentiment of a product review.
+    # """
 
-    messages = [{"role": "system", "content": system_message},
-                {"role": "user", "content": prompt}
+    # messages = [{"role": "system", "content": system_message},
+    #             {"role": "user", "content": prompt}
+    # ]
+
+    messages = [
+        {"role": "user", "content": prompt}
     ]
     temperature=0.5
     response = client.chat.completions.create(
@@ -90,12 +90,19 @@ with open('./data/review.txt', 'r') as f:
 
 
 prompt = f"""
-Here is a product review from a customer
+Here is a product review from a customer, which is delimited with triple backticks.
 {review_text}
 
     What is the sentiment of that product review?
     Identify the product being reviewed.
     Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
 """ 
 
 print('Prompt: %s' %prompt)

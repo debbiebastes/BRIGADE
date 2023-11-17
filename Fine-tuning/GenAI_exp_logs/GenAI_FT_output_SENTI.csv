@@ -1,0 +1,1522 @@
+body,context_ChatGPT model,context_temperature,context_ChatGPT token usage,context_prompt,timestamp
+"To proceed, kindly provide the product review text delimited with triple backticks.",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=15, prompt_tokens=118, total_tokens=133)","
+Here is a product review from a customer, which is delimited with triple backticks.
+
+```
+ 
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:39:23
+"```json
+{
+    ""Product name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was a bit time-consuming""
+    ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=87, prompt_tokens=190, total_tokens=277)","
+Here is a product review from a customer, which is delimited with triple backticks.
+
+```
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:41:52
+"```json
+{
+  ""Product name"": ""Sahara Sands Canopy Bed"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Adds a touch of elegance to the bedroom"",
+    ""Exceptional quality"",
+    ""Beautiful design"",
+    ""Very sturdy""
+  ],
+  ""Negative comments about the product"": [
+    ""Assembly was time-consuming""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=85, prompt_tokens=190, total_tokens=275)","
+Here is a product review from a customer, which is delimited with triple backticks.
+
+```
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:42:42
+"{
+    ""Product name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was time-consuming""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=81, prompt_tokens=190, total_tokens=271)","
+Here is a product review from a customer, which is delimited with triple backticks.
+```
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+```
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:43:22
+"{
+    ""Product Name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was time-consuming""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=81, prompt_tokens=178, total_tokens=259)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:44:37
+"```json
+{
+    ""Product name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was time-consuming""
+    ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=85, prompt_tokens=178, total_tokens=263)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:45:12
+"```json
+{
+  ""Product name"": ""Sahara Sands Canopy Bed"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Adds a touch of elegance to the bedroom"",
+    ""Exceptional quality"",
+    ""Beautiful design"",
+    ""Very sturdy""
+  ],
+  ""Negative comments about the product"": [
+    ""Assembly was time-consuming""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=85, prompt_tokens=178, total_tokens=263)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:45:40
+"```json
+{
+  ""Product name"": ""Sahara Sands Canopy Bed"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Adds a touch of elegance to the bedroom"",
+    ""Exceptional quality"",
+    ""Beautiful design"",
+    ""Very sturdy""
+  ],
+  ""Negative comments about the product"": [
+    ""Assembly was time-consuming""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=85, prompt_tokens=178, total_tokens=263)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:45:57
+"{
+    ""Product name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was time-consuming""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=81, prompt_tokens=178, total_tokens=259)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:46:31
+"{
+    ""Product Name"": ""Sahara Sands Canopy Bed"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Adds a touch of elegance to the bedroom"",
+        ""Exceptional quality"",
+        ""Beautiful design"",
+        ""Very sturdy""
+    ],
+    ""Negative comments about the product"": [
+        ""Assembly was time-consuming""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=81, prompt_tokens=178, total_tokens=259)","
+Here is a product review from a customer
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:46:44
+"{
+    ""Product Name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Expected better craftsmanship for the price""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=84, prompt_tokens=192, total_tokens=276)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:47:27
+"{
+    ""Product Name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design that complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Expected better craftsmanship for the price""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=83, prompt_tokens=192, total_tokens=275)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:47:36
+"{
+    ""Product Name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Expected better craftsmanship for the price""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8KMcfHLQ,0.5,"CompletionUsage(completion_tokens=84, prompt_tokens=192, total_tokens=276)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-15 11:47:46
+"{
+    ""Product name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design"",
+        ""Complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Quality not up to par"",
+        ""Arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Craftsmanship not as expected for the price""
+    ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=96, prompt_tokens=478, total_tokens=574)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-16 14:00:59
+"The sentiment of the product review is mixed. 
+
+Product being reviewed: Zen End Table
+
+Positive aspects:
+1. Sleek and modern design
+2. Complements the customer's living room aesthetic
+
+Negative aspects:
+1. Poor quality, with scratches on arrival
+2. Flimsy wood
+3. Expectation of better craftsmanship for the price paid
+
+Overall, the review expresses a mixed sentiment, with positive comments about the design and aesthetic appeal, but negative feedback regarding the quality and craftsmanship of the Zen End Table.",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=105, prompt_tokens=154, total_tokens=259)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-16 14:03:00
+"The sentiment of the product review is mixed.
+
+Product being reviewed: Zen End Table
+
+Positive aspects:
+1. Sleek and modern design
+2. Complements the customer's living room aesthetic
+
+Negative aspects:
+1. Poor quality
+2. Arrived with scratches
+3. Wood feels flimsy
+4. Expectation of better craftsmanship for the price paid
+
+Overall, the review expresses a mix of positive and negative sentiments towards the Zen End Table, with the negative aspects outweighing the positive ones.",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=102, prompt_tokens=154, total_tokens=256)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-16 14:03:08
+"The sentiment of the product review is mixed. 
+
+Product being reviewed: Zen End Table
+
+Positive aspects:
+1. Sleek and modern design that complements the customer's living room aesthetic.
+
+Negative aspects:
+1. Poor quality, with the table arriving with a few scratches.
+2. The wood feels flimsy.
+3. Disappointment in the craftsmanship relative to the price paid.
+
+Overall, the review expresses a mix of positive and negative sentiments, ultimately resulting in a 3-star rating.",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=99, prompt_tokens=154, total_tokens=253)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-16 14:03:35
+"The sentiment of the product review for the Zen End Table is mixed.
+
+Product being reviewed: Zen End Table
+
+Positive aspects:
+1. Sleek and modern design complements the customer's living room aesthetic.
+
+Negative aspects:
+1. Poor quality, with the table arriving with a few scratches.
+2. The wood feels flimsy.
+3. The craftsmanship did not meet the customer's expectations given the price paid.
+
+Overall, the review expresses a balance of positive and negative feedback, resulting in a 3-star rating.",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=104, prompt_tokens=154, total_tokens=258)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+",2023-11-16 14:03:43
+"{
+    ""Product name"": ""Zen End Table"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Sleek and modern design, complements the living room aesthetic""
+    ],
+    ""Negative comments about the product"": [
+        ""Poor quality, arrived with scratches"",
+        ""Wood feels flimsy"",
+        ""Expected better craftsmanship for the price""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=85, prompt_tokens=209, total_tokens=294)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+        What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:05:13
+"```json
+{
+  ""Product name"": ""Zen End Table"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Sleek and modern design"",
+    ""Complements living room aesthetic""
+  ],
+  ""Negative comments about the product"": [
+    ""Quality not up to par"",
+    ""Arrived with scratches"",
+    ""Wood feels flimsy"",
+    ""Expected better craftsmanship for the price""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=96, prompt_tokens=209, total_tokens=305)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+        What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:05:47
+"```json
+{
+  ""Product name"": ""Zen End Table"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Sleek and modern design"",
+    ""Complements living room aesthetic""
+  ],
+  ""Negative comments about the product"": [
+    ""Arrived with scratches"",
+    ""Flimsy wood"",
+    ""Expected better craftsmanship for the price""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=87, prompt_tokens=209, total_tokens=296)","
+Here is a product review from a customer
+Product Name: Zen End Table
+Review text: 
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+
+        What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:05:57
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size of the unit was larger than expected"",
+    ""The name suggests it's small, but it's not""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=83, prompt_tokens=208, total_tokens=291)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:15:37
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size was larger than expected, contrary to the name's suggestion""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=73, prompt_tokens=208, total_tokens=281)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:15:56
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when I have company""
+  ],
+  ""Negative comments about the product"": [
+    ""Larger than expected"",
+    ""Name suggests it's small""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=80, prompt_tokens=188, total_tokens=268)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:16:57
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The customer was expecting a small unit but found it to be as large as their regular coffee maker"",
+    ""The name of the product suggests it's small, which was misleading""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=91, prompt_tokens=188, total_tokens=279)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:17:09
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size of the unit is larger than expected"",
+    ""The name suggests it's small""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=188, total_tokens=262)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:17:18
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's larger than anticipated"",
+    ""Name suggests it's small""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=96, prompt_tokens=188, total_tokens=284)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:18:19
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit"",
+    ""Feels it's about as large as a regular coffee maker"",
+    ""Hasn't used it yet, so can't comment on its performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=112, prompt_tokens=188, total_tokens=300)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:18:53
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company, indicating it's intended for occasional use"",
+    ""Hopes that it works well, suggesting optimism about its performance""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit based on the name"",
+    ""Surprised by its larger size, comparable to a regular coffee maker"",
+    ""Hasn't used the product yet, so unable to comment on its actual performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=136, prompt_tokens=188, total_tokens=324)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:19:10
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""The previous Keurig owned by the customer was great""
+  ],
+  ""Negative comments about the product"": [
+    ""The coffee from the K-Compact model doesn't get hot enough"",
+    ""The heat level of the coffee is not consistent with the customer's expectations""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=102, prompt_tokens=182, total_tokens=284)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:20:03
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""The previous Keurig owned by the customer was great""
+  ],
+  ""Negative comments about the product"": [
+    ""The coffee from the reviewed Keurig doesn't get hot enough"",
+    ""The previous Keurig owned by the customer was hotter than the reviewed one""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=103, prompt_tokens=182, total_tokens=285)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:20:22
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The coffee doesn't get hot enough""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=67, prompt_tokens=182, total_tokens=249)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:20:53
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""First Keurig was great""
+  ],
+  ""Negative comments about the product"": [
+    ""Doesn’t get hot enough""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=73, prompt_tokens=182, total_tokens=255)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:21:02
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""My first Kerig was great""
+  ],
+  ""Negative comments about the product"": [
+    ""This one doesn’t get hot enough""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=182, total_tokens=256)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:21:07
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The coffee doesn't get hot enough""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=63, prompt_tokens=182, total_tokens=245)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:21:13
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""My first Kerig was great.""
+  ],
+  ""Negative comments about the product"": [
+    ""This one doesn’t get hot enough.""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=182, total_tokens=256)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:21:18
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [""The coffee doesn’t get hot enough.""]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=59, prompt_tokens=182, total_tokens=241)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I really like reasonably hot coffee. My first Kerig was great. My second ok. So I ordered another one because my friend has a Kerig and the coffee gets super hot. This one doesn’t get hot enough.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:21:25
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [
+    ""Loved the product while it was working"",
+    ""Pretty in red""
+  ],
+  ""Negative comments about the product"": [
+    ""Sudden stop in working""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=80, prompt_tokens=161, total_tokens=241)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I loved this product while it was working. It was also quite pretty in red. Unfortunately, it suddenly stopped working.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:22:18
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [""Loved the product while it was working"", ""Pretty in red""],
+  ""Negative comments about the product"": [""Stopped working suddenly""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=73, prompt_tokens=161, total_tokens=234)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I loved this product while it was working. It was also quite pretty in red. Unfortunately, it suddenly stopped working.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:22:23
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Loved the product while it was working"",
+    ""Quite pretty in red""
+  ],
+  ""Negative comments about the product"": [
+    ""Suddenly stopped working""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=79, prompt_tokens=161, total_tokens=240)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I loved this product while it was working. It was also quite pretty in red. Unfortunately, it suddenly stopped working.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:23:07
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Loved the product while it was working"",
+    ""Quite pretty in red""
+  ],
+  ""Negative comments about the product"": [
+    ""Suddenly stopped working""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=79, prompt_tokens=161, total_tokens=240)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I loved this product while it was working. It was also quite pretty in red. Unfortunately, it suddenly stopped working.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:23:16
+"{
+    ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Loved the product while it was working"",
+        ""Quite pretty in red""
+    ],
+    ""Negative comments about the product"": [
+        ""Suddenly stopped working""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=79, prompt_tokens=161, total_tokens=240)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I loved this product while it was working. It was also quite pretty in red. Unfortunately, it suddenly stopped working.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:23:23
+"{
+    ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+    ""Review Sentiment"": ""Negative"",
+    ""Positive comments about the product"": [],
+    ""Negative comments about the product"": [
+        ""Water holder not big enough"",
+        ""Difficult to get to""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=69, prompt_tokens=148, total_tokens=217)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+Water holder not big enough and difficult to get to
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:23:59
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""Water holder not big enough"",
+    ""Difficult to get to""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=69, prompt_tokens=148, total_tokens=217)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+Water holder not big enough and difficult to get to
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:24:04
+"{
+    ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+    ""Review Sentiment"": ""Negative"",
+    ""Positive comments about the product"": [],
+    ""Negative comments about the product"": [
+        ""Water holder not big enough"",
+        ""Difficult to get to""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=69, prompt_tokens=148, total_tokens=217)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+Water holder not big enough and difficult to get to
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:24:08
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Negative"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The motherboard does not allow the XMP profile to reach the advertised 6400MHz speed"",
+    ""The RAM is capping out at 4800MHz and will refuse to boot at higher speeds"",
+    ""The reviewer recommends a different Corsair model (CMK32GX5M2X6400C38) for the same motherboard, but it only sells as 16GB sticks"",
+    ""Concern about compatibility with ASUS motherboards, advising to check the compatibility website before purchasing""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=158, prompt_tokens=258, total_tokens=416)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+The RAM MT speed is 6400MHz, but the motherboard does not allow the XMP profile to go up to the advertised 6400 MT. Mine is capping out at 4800MHz and will refuse to boot if I put the speed any higher. If you have the same motherboard as me and want to stay Corsair, you will need the CMK32GX5M2X6400C38 which only sells as 16GB sticks. Make sure to check the ASUS compatibility website before purchasing any RAM to make sure it will see the advertised MT speed.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:27:41
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Compatible with Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides 64GB of memory, meeting the user's needs"",
+    ""Works as expected""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by the OEM motherboard, unable to utilize the full capacity""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=111, prompt_tokens=218, total_tokens=329)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:29:07
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Easy installation in a pre-built Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides the 64GB memory capacity the user was looking for""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by the capabilities of the OEM motherboard, unable to fully utilize the RAM's capacity""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=114, prompt_tokens=218, total_tokens=332)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:30:35
+"{
+    ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Easy installation in a pre-built gaming PC (Lenovo Legion T7 34IAZ7)"",
+        ""Provides the 64GB memory capacity desired"",
+        ""Works well despite limitations of the OEM motherboard""
+    ],
+    ""Negative comments about the product"": [
+        ""Limited by the capabilities of the OEM motherboard, unable to fully utilize the RAM's capacity""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=123, prompt_tokens=218, total_tokens=341)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:46:52
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Compatible with the Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides the 64GB memory capacity the user was looking for""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by the capabilities of the OEM motherboard""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=102, prompt_tokens=218, total_tokens=320)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:47:18
+"{
+    ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Compatible with the Lenovo Legion T7 34IAZ7 gaming PC"",
+        ""Provides the 64GB memory capacity the user was looking for""
+    ],
+    ""Negative comments about the product"": [
+        ""Limited by the capabilities of the OEM motherboard""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=102, prompt_tokens=218, total_tokens=320)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:47:36
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Got the 64G headroom I was looking for""
+  ],
+  ""Negative comments about the product"": [
+    ""Can't use it to its full capacity due to the limitations of the OEM motherboard""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=112, prompt_tokens=218, total_tokens=330)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:48:13
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Memory worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Got the 64G headroom I was looking for""
+  ],
+  ""Negative comments about the product"": [
+    ""Can't use it to its full capacity due to the limitations of the OEM motherboard""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=112, prompt_tokens=218, total_tokens=330)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:48:19
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Works well in Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides 64GB memory headroom""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by OEM motherboard""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=93, prompt_tokens=218, total_tokens=311)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:48:28
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Works well with pre-built systems"",
+    ""Provides the desired 64GB memory capacity""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by the OEM motherboard""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=87, prompt_tokens=218, total_tokens=305)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:48:47
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Works well in Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides 64GB memory capacity""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by OEM motherboard""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=92, prompt_tokens=218, total_tokens=310)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:48:51
+"{
+  ""Product name"": ""CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Works well in Lenovo Legion T7 34IAZ7 gaming PC"",
+    ""Provides 64GB headroom as expected""
+  ],
+  ""Negative comments about the product"": [
+    ""Limited by OEM motherboard capacity""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=95, prompt_tokens=218, total_tokens=313)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-16 14:49:22

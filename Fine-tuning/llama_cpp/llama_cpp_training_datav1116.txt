@@ -1,0 +1,404 @@
+
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Sahara Sands Canopy Bed
+    Review text: 
+    ```
+    I absolutely love my Sahara Sands Canopy Bed! It adds a touch of elegance to my bedroom and the quality is exceptional. The assembly was a bit time-consuming, but the end result is worth it. The design is beautiful and the bed is very sturdy. Definitely worth the investment.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Sahara Sands Canopy Bed",
+    "Review Sentiment": "Positive",
+    "Positive comments about the product": [
+        "Adds a touch of elegance to the bedroom",
+        "Exceptional quality",
+        "Beautiful design",
+        "Very sturdy",
+        "Worth the investment"
+    ],
+    "Negative comments about the product": [
+        "Assembly was time-consuming"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Maracay Rattan Armchair
+    Review text: 
+    ```
+  The Maracay Rattan Armchair is a decent choice for outdoor seating. The rattan material feels sturdy and the chair is comfortable to sit in. However, the assembly instructions were a bit confusing and the chair wobbles slightly on uneven ground. Overall, it's an average product.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Maracay Rattan Armchair",
+    "Review Sentiment": "Neutral",
+    "Positive comments about the product": [
+        "Sturdy rattan material",
+        "Comfortable to sit in"
+    ],
+    "Negative comments about the product": [
+        "Assembly instructions were confusing",
+        "Wobbles slightly on uneven ground"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Himalaya Summit Coffee Table
+    Review text: 
+    ```
+    I was very disappointed with the quality of this coffee table. It arrived with scratches all over and the wood was chipped in several places. Definitely not worth the price. Would not recommend.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Himalaya Summit Coffee Table",
+    "Review Sentiment": "Negative",
+    "Positive comments about the product": [],
+    "Negative comments about the product": [
+        "Poor quality",
+        "Arrived with scratches all over",
+        "Wood was chipped in several places",
+        "Not worth the price",
+        "Would not recommend the product"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Jaipur Tapestry Bookshelf
+    Review text: 
+    ```
+    The Jaipur Tapestry Bookshelf looks nice but it was difficult to assemble and the quality is not as sturdy as I had hoped. It serves its purpose but I expected better for the price.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Jaipur Tapestry Bookshelf",
+    "Review Sentiment": "Neutral",
+    "Positive comments about the product": [
+        "Looks nice",
+        "Serves its purpose"
+    ],
+    "Negative comments about the product": [
+        "Difficult to assemble",
+        "Quality not as sturdy as expected",
+        "Expected better for the price"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Ember Ottoman
+    Review text: 
+    ```
+The Ember Ottoman is not very sturdy and the fabric started to tear after just a few weeks of use. I was disappointed with the quality for the price.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Ember Ottoman",
+    "Review Sentiment": "Negative",
+    "Positive comments about the product": [],
+    "Negative comments about the product": [
+        "Not very sturdy",
+        "Fabric started to tear after just a few weeks of use",
+        "Disappointment with the quality relative to the price"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Kyoto Blossom Lounge Chair
+    Review text: 
+    ```
+The Kyoto Blossom Lounge Chair is stylish and comfortable. However, the assembly was a bit tricky and the fabric started to show signs of wear after a few months of use. It's a decent chair for the price, but I expected better quality.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Kyoto Blossom Lounge Chair",
+    "Review Sentiment": "Neutral",
+    "Positive comments about the product": [
+        "Stylish",
+        "Comfortable",
+        "Decent for the price"
+    ],
+    "Negative comments about the product": [
+        "Assembly was a bit tricky",
+        "Fabric started to show signs of wear after a few months",
+        "Expected better quality for the price"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: ProTech Precision Screwdriver
+    Review text: 
+    ```
+This ProTech Precision Screwdriver has been an absolute game-changer for my toolkit. I primarily use it for intricate electronics and gadget repairs, and it's proven to be incredibly efficient. The ergonomic design ensures a comfortable grip, even during long use periods, which is a significant plus for me. The precision and strength of the tips are noteworthy, allowing me to work on delicate components without fear of stripping screws. The addition of multiple bit sizes, including the less common ones, makes this screwdriver versatile for a variety of tasks. Although the magnetic tip strength could be better to hold screws more securely, it's a minor issue compared to the overall quality and functionality. I've recommended this to several colleagues, and they all share my high opinion. Excellent product!
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "ProTech Precision Screwdriver",
+    "Review Sentiment": "Positive",
+    "Positive comments about the product": [
+        "Game-changer for the toolkit",
+        "Efficient for intricate electronics and gadget repairs",
+        "Ergonomic design ensures a comfortable grip, even during long use periods",
+        "Precision and strength of the tips are noteworthy",
+        "Suitable for working on delicate components without stripping screws",
+        "Includes multiple bit sizes, including less common ones, for versatility",
+        "High overall quality and functionality",
+        "Received recommendations to colleagues"
+    ],
+    "Negative comments about the product": [
+        "Magnetic tip strength could be better for holding screws more securely"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: CompactPro Screwdriver
+    Review text: 
+    ```
+Great screwdriver
+I've been using this for mostly electrical type work where this works great. The ratcheting makes it easy to figure out when not to overtighten so that faceplates don't get cracked. It makes unscrewing a breeze as well. The special bits that are included are also nice including the Robertson one.
+
+Minor issues I've noticed are that sometimes bits fall out randomly when taking one out and the hex bits not being security (why?). Otherwise no real issues.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "CompactPro Screwdriver",
+    "Review Sentiment": "Positive",
+    "Positive comments about the product": [
+        "Works great for electrical type work",
+        "Ratcheting mechanism helps prevent overtightening",
+        "Makes unscrewing easy",
+        "Includes special bits, including a Robertson bit"
+    ],
+    "Negative comments about the product": [
+        "Bits sometimes fall out randomly when changing them",
+        "Concern about hex bits not being secured"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+    Product Name: Gourmet Express
+    Review text: 
+    ```
+The food is good. But everytime I ordered and put some note it is always incomplete. Like sometimes they don't put tempura flakes, or chili flakes.
+    ```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "Gourmet Express",
+    "Review Sentiment": "Neutral",
+    "Positive comments about the product": [
+        "The food is good"
+    ],
+    "Negative comments about the product": [
+        "Orders often arrive incomplete",
+        "Specific requests like tempura flakes or chili flakes are frequently missed"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: MaxGrip Screwdriver
+Review text: 
+```
+OK I guess.
+Handle is too small for XL hands. No PZ2 bit (everything uses PZ2s).
+Delivery was slow. Customer service was slow to reply.
+Screwdriver mechanism is fine, it was the biggest selling point of the driver.
+Magmatism is strong, holds screw well.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "MaxGrip Screwdriver",
+    "Review Sentiment": "Neutral",
+    "Positive comments about the product": [
+        "Screwdriver mechanism is fine and was a major selling point",
+        "Magnetism is strong, holds screws well"
+    ],
+    "Negative comments about the product": [
+        "Handle is too small for extra-large hands",
+        "Lacks a PZ2 bit, which is commonly used",
+        "Delivery was slow",
+        "Customer service was slow to reply"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: VisionTech Ultra HD Smart TV
+Review text: 
+```
+I read them all, and there was resounding agreement about (1) the software being awful and (2) the picture being gorgeous. I disagree with #2.
+
+INTERFACE: I thought they were whiners as they complained about multiple clicks, but it is truly awful, junky, BUGGY, and disorganized. It’s constantly throwing you back to other menus, and those menus are deep! This is a really expensive TV that I don’t even use because it’s such a pain to operate. Really. It’s easier to walk upstairs or grab an ipad.
+
+PICTURE: Other people have mentioned that the first thing this TV does is steal a couple hours of your life by failing to set up the software. No. You can’t just turn on your TV and start watching. Maybe those reviews didn’t mention that, as a result, you’ve been staring at the blue screen—and truly loathing the experience—for a very long time. If you are lucky enough to get to the point where they start trying to sell you art that’s in the public domain, the blue glare is burnt into your eyeballs and you have no hope of seeing that thing as anything other than a really annoying TV.
+
+Yes. Guests will ask about it, but not because it’s convincing—because it ISN’T convincing. If they see a static image (and especially if you forked out the extra dough to buy a frame that isn’t black), your guests will see things that don’t fit with the standard idea of a TV or computer monitor. But the screen itself has little else to offer. You can warm up the tone and turn down the brightness, but that blue glare will always shine through. (Also, if you tinker with the setting much, you’re just asking for the software to start glitching, which demands a total reset.)
+
+This TV could truly be a joy for someone who likes to spend all their time fighting with buggy computers. Those people do exist. I’m just not one of them.
+
+I like that it’s thin.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "VisionTech Ultra HD Smart TV",
+    "Review Sentiment": "Negative",
+    "Positive comments about the product": [
+        "The TV is thin"
+    ],
+    "Negative comments about the product": [
+        "The software is described as awful, junky, buggy, and disorganized",
+        "The user interface is cumbersome and throws the user back to other menus",
+        "Setting up the software is time-consuming and problematic",
+        "Poor experience with a blue screen during setup",
+        "The picture quality, especially the blue glare, is disappointing",
+        "Adjusting settings can cause software glitches and may require a total reset",
+        "Overall, the TV is seen as a hassle to operate and not convincing in its display"
+    ]
+}
+<s>
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: NVIDIA GeForce RTX 4060 Ti
+Review text: 
+```
+It is considered a low end card since the GPU is slower than last gen for gaming and comparable to a 3060 minus raw power and memory speed. But I use it for AI, and when it comes to AI this card gen crush entry level AI cards that are 1400$+ due to higher clock speed.
+
+I use it for my old PC (Still working and very decent) that had a very old Geforce 460 1GB.
+This little 4060 Ti can do SD as fast as 3070 Ti with a GPU temp under 45c, which is very impressive.
+
+I don't expect that this card will age very well, will probably last longer, and I won’t have to deal with the power connector fiasco. It will be a good temporary replacement card if my main PC break.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer: {
+    "Product name": "NVIDIA GeForce RTX 4060 Ti",
+    "Review Sentiment": "Positive",
+    "Positive comments about the product": [
+        "Performs well for AI tasks, surpassing entry-level AI cards priced over $1400",
+        "Higher clock speed beneficial for AI applications",
+        "Significant improvement over the older Geforce 460 1GB in an older PC",
+        "Comparable to a 3070 Ti in terms of speed, with a lower GPU temperature under 45°C",
+        "Expected to have a longer lifespan without power connector issues",
+        "A good temporary replacement for a main PC card"
+    ],
+    "Negative comments about the product": [
+        "Considered a low-end card for gaming",
+        "Slower than previous generation graphics cards for gaming",
+        "Comparable to a 3060, but with less raw power and memory speed",
+        "Concerns about its long-term performance"
+    ]
+}
