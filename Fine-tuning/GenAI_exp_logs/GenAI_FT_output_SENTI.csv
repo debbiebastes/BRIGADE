@@ -1520,3 +1520,1235 @@ It's always a risk with pre-builts that upgrades may not work. This 64Gb memory 
 
 Answer:
 ",2023-11-16 14:49:22
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Perfect for relaxing after a long day"",
+    ""Top-notch craftsmanship"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design, such as curved armrests and ergonomic backrest"",
+    ""Brings joy and relaxation to the customer's life""
+  ],
+  ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=124, prompt_tokens=231, total_tokens=355)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:01
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Perfect for relaxing after a long day"",
+    ""Top-notch craftsmanship"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design, such as curved armrests and ergonomic backrest"",
+    ""Brings joy and relaxation to the customer's life""
+  ],
+  ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=124, prompt_tokens=231, total_tokens=355)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:07
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Perfect for relaxing after a long day"",
+    ""Top-notch craftsmanship"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design, such as curved armrests and ergonomic backrest"",
+    ""Brings joy and relaxation to the customer's life""
+  ],
+  ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=124, prompt_tokens=231, total_tokens=355)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:11
+"{
+    ""Product name"": ""Bliss Rocking Chair"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Beautiful design"",
+        ""Incredibly comfortable"",
+        ""Smooth and soothing rocking motion"",
+        ""Perfect for relaxing after a long day"",
+        ""Top-notch craftsmanship"",
+        ""Sturdy construction"",
+        ""High-quality materials"",
+        ""Attention to detail in the design, such as the curved armrests and the ergonomic backrest"",
+        ""Brings joy and relaxation to the customer's life""
+    ],
+    ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=126, prompt_tokens=231, total_tokens=357)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:14
+"{
+    ""Product name"": ""Bliss Rocking Chair"",
+    ""Review Sentiment"": ""Positive"",
+    ""Positive comments about the product"": [
+        ""Beautiful design"",
+        ""Incredibly comfortable"",
+        ""Smooth and soothing rocking motion"",
+        ""Perfect for relaxing after a long day"",
+        ""Top-notch craftsmanship"",
+        ""Sturdy construction"",
+        ""High-quality materials"",
+        ""Attention to detail in the design, such as the curved armrests and the ergonomic backrest"",
+        ""Brings joy and relaxation to the customer's life""
+    ],
+    ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=126, prompt_tokens=231, total_tokens=357)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:17
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Perfect for relaxing after a long day"",
+    ""Top-notch craftsmanship"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design, such as the curved armrests and the ergonomic backrest"",
+    ""Brings joy and relaxation to the customer's life""
+  ],
+  ""Negative comments about the product"": []
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=126, prompt_tokens=231, total_tokens=357)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:20
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in design"",
+    ""Curved armrests"",
+    ""Ergonomic backrest""
+  ],
+  ""Negative comments about the product"": []
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=99, prompt_tokens=231, total_tokens=330)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:38
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Top-notch craftsmanship"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design"",
+    ""Curved armrests"",
+    ""Ergonomic backrest"",
+    ""Brings joy and relaxation""
+  ],
+  ""Negative comments about the product"": []
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=114, prompt_tokens=231, total_tokens=345)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:42
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Attention to detail in the design"",
+    ""Curved armrests"",
+    ""Ergonomic backrest""
+  ],
+  ""Negative comments about the product"": []
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=100, prompt_tokens=231, total_tokens=331)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:48
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful and comfortable design"",
+    ""Smooth and soothing rocking motion"",
+    ""Sturdy construction and high-quality materials"",
+    ""Attention to detail in the design, such as curved armrests and ergonomic backrest""
+  ],
+  ""Negative comments about the product"": []
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=88, prompt_tokens=231, total_tokens=319)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:45:52
+"{
+  ""Product name"": ""Bliss Rocking Chair"",
+  ""Review Sentiment"": ""Positive"",
+  ""Positive comments about the product"": [
+    ""Beautiful design"",
+    ""Incredibly comfortable"",
+    ""Smooth and soothing rocking motion"",
+    ""Sturdy construction"",
+    ""High-quality materials"",
+    ""Curved armrests and ergonomic backrest""
+  ],
+  ""Negative comments about the product"": []
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=87, prompt_tokens=231, total_tokens=318)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:46:02
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay, but it's not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=75, prompt_tokens=162, total_tokens=237)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:46:59
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""Fabric quality is okay, but not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=70, prompt_tokens=162, total_tokens=232)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:47:09
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay"",
+    ""Not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:47:12
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay, but not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=73, prompt_tokens=162, total_tokens=235)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:47:15
+"```json
+{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=60, prompt_tokens=162, total_tokens=222)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 10:51:01
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in the living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is only okay"",
+    ""Not the most comfortable seating experienced""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:08:31
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:08:35
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in the living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is only okay"",
+    ""Not the most comfortable seating experienced""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:08:38
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:08:41
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=75, prompt_tokens=162, total_tokens=237)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:08:43
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit"",
+    ""Feels it's about as large as a regular coffee maker"",
+    ""Hasn't used it yet, so no experience with its performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=111, prompt_tokens=188, total_tokens=299)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:29
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's larger than anticipated"",
+    ""Name suggests it's small""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=96, prompt_tokens=188, total_tokens=284)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:32
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit"",
+    ""Feels it's about as large as a regular coffee maker"",
+    ""Hasn't used it yet, so no experience with its performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=111, prompt_tokens=188, total_tokens=299)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:35
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's relatively large"",
+    ""Name suggests it's small""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=95, prompt_tokens=188, total_tokens=283)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:38
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company, indicating it's intended for occasional use"",
+    ""Hopes that it works well, suggesting optimism about its performance""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit based on the name"",
+    ""Surprised by its size, as it is about as large as the customer's regular coffee maker"",
+    ""Hasn't used it yet, so there are no specific positive experiences to mention""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=142, prompt_tokens=188, total_tokens=330)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:41
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's as large as the regular coffee maker"",
+    ""The name suggests it's small"",
+    ""Hasn't used it yet, so unable to comment on its performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=118, prompt_tokens=188, total_tokens=306)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:46
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a smaller unit"",
+    ""Feels it's about as large as a regular coffee maker"",
+    ""Hasn't used it yet, so no experience with its performance""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=111, prompt_tokens=188, total_tokens=299)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:50
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's larger than expected"",
+    ""Name suggests it's small, which was misleading"",
+    ""Hasn't used it yet""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=109, prompt_tokens=188, total_tokens=297)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:55
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit but it's larger than anticipated"",
+    ""The name suggests it's small, but it's not""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=101, prompt_tokens=188, total_tokens=289)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:09:58
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when the customer has company"",
+    ""Hopes it works well""
+  ],
+  ""Negative comments about the product"": [
+    ""Expected a small unit, but it's larger than anticipated"",
+    ""The name suggests it's small, which was misleading"",
+    ""Hasn't used it yet""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=110, prompt_tokens=188, total_tokens=298)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:01
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""Larger than expected""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=64, prompt_tokens=188, total_tokens=252)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:30
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size of the unit was larger than expected"",
+    ""The name suggests it's small""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=78, prompt_tokens=188, total_tokens=266)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:34
+"```json
+{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""Expectation of a small unit but it's about as large as the regular coffee maker""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=77, prompt_tokens=188, total_tokens=265)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:38
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size of the unit was larger than expected"",
+    ""Haven't used yet, so unsure about its performance""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=79, prompt_tokens=188, total_tokens=267)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:41
+"{
+   ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+   ""Review Sentiment"": ""Neutral"",
+   ""Positive comments about the product"": [],
+   ""Negative comments about the product"": [
+      ""The customer was expecting a smaller unit based on the name, but it turned out to be larger than expected.""
+   ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=77, prompt_tokens=188, total_tokens=265)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:44
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when I have company""
+  ],
+  ""Negative comments about the product"": [
+    ""Larger than expected""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=72, prompt_tokens=188, total_tokens=260)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:49
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size was larger than expected"",
+    ""Haven't used yet, so unsure about its performance""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=188, total_tokens=264)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:55
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""Larger than expected size"",
+    ""Uncertainty about its performance since it hasn't been used yet""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=188, total_tokens=264)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:10:59
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Purchased for when I have company""
+  ],
+  ""Negative comments about the product"": [
+    ""Larger than expected"",
+    ""Name suggests it's small""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=80, prompt_tokens=188, total_tokens=268)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:11:03
+"{
+  ""Product name"": ""Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [],
+  ""Negative comments about the product"": [
+    ""The size of the unit was larger than expected"",
+    ""The name suggests it's small""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=188, total_tokens=262)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-20 11:11:06
