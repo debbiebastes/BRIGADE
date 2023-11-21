@@ -1,5 +1,4 @@
 {
     "prompt": "{question}",
     "completion": "{answer}"
-}
-  
+} 
