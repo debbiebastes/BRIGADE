@@ -1,0 +1,10 @@
+Create a realistic customer review for the product below. It can be positive, negative or neutral sentiment given the provided Star Rating. Limit your response to 150  words.
+
+Product:
+```
+Aspen Dining Table
+ ```
+Rating:
+```
+4
+```
