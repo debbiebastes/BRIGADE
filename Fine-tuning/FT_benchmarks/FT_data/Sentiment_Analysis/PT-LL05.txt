@@ -1,0 +1,80 @@
+Your task is to identify the sentiment of a product review. Here are a few examples of a product review from a customer, along with the corresponding sentiment analysis of the review:
+
+Example #1:
+Product Name: Provence French Country-style Wardrobe
+Review text: 
+```
+I am extremely disappointed with this wardrobe. The quality of the materials used is very poor and the construction feels flimsy. The doors do not close properly and the hinges are already coming loose after just a few weeks of use. I expected much better for the price I paid. Would not recommend it.
+```
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+{
+  "Product name": "Provence French Country-style Wardrobe",
+  "Review Sentiment": "Negative",
+  "Positive comments about the product": [],
+  "Negative comments about the product": [
+    "Poor quality of materials",
+    "Flimsy construction",
+    "Doors do not close properly",
+    "Hinges coming loose after a few weeks of use",
+    "Not worth the price"
+  ]
+}
+
+Example #2:
+Product Name: Zen End Table
+Review text: 
+```
+I have mixed feelings about it. On the positive side, the design is sleek and modern, which complements my living room aesthetic. However, the quality is not up to par. The table arrived with a few scratches and the wood feels a bit flimsy. For the price I paid, I expected better craftsmanship. Overall, I would give it 3 stars. 
+```
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+{
+  "Product name": "Zen End Table",
+  "Review Sentiment": "Neutral",
+  "Positive comments about the product": [
+    "Sleek and modern design",
+    "Complements living room aesthetic"
+  ],
+  "Negative comments about the product": [
+    "Quality not up to par",
+    "Arrived with a few scratches",
+    "Wood feels flimsy",
+    "Expected better craftsmanship for the price"
+  ]
+}
+		
+Now, here is another product review from a customer, which is delimited with triple backticks.
+
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:

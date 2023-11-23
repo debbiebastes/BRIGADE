@@ -2752,3 +2752,561 @@ I'm not a coffee drinker but purchased this for when I have company. I was expec
 
 Answer:
 ",2023-11-20 11:11:06
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in my living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is okay, but it's not the most comfortable seating""
+    ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=75, prompt_tokens=162, total_tokens=237)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:08
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay"",
+    ""Not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:16
+"```json
+{
+   ""Product name"": ""Kyushu Calm Lounge Sofa"",
+   ""Review Sentiment"": ""Neutral"",
+   ""Positive comments about the product"": [""Looks nice in my living room""],
+   ""Negative comments about the product"": [""Not the most comfortable seating""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=60, prompt_tokens=162, total_tokens=222)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:20
+"```json
+{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=60, prompt_tokens=162, total_tokens=222)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:25
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating""]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=56, prompt_tokens=162, total_tokens=218)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:32
+"```json
+{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=60, prompt_tokens=162, total_tokens=222)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:37
+"```json
+{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay, but not the most comfortable seating""
+  ]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=77, prompt_tokens=162, total_tokens=239)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:40
+"```json
+{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating""]
+}
+```",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=60, prompt_tokens=162, total_tokens=222)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:44
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [""Looks nice in my living room""],
+  ""Negative comments about the product"": [""Not the most comfortable seating"", ""The quality of the fabric is okay""]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=65, prompt_tokens=162, total_tokens=227)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:53
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in my living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is okay"",
+    ""Not the most comfortable seating""
+  ]
+}",gpt-3.5-turbo-1106,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:26:57
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The fabric quality is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:27:48
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:27:51
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:27:56
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:27:59
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in the living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The fabric quality is only okay"",
+    ""Not the most comfortable seating experienced""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:02
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The fabric quality is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=74, prompt_tokens=162, total_tokens=236)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:05
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in the living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is only okay"",
+    ""Not the most comfortable seating experienced""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:08
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The quality of the fabric is only okay"",
+        ""Not the most comfortable seating experienced""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:11
+"{
+  ""Product name"": ""Kyushu Calm Lounge Sofa"",
+  ""Review Sentiment"": ""Neutral"",
+  ""Positive comments about the product"": [
+    ""Looks nice in the living room""
+  ],
+  ""Negative comments about the product"": [
+    ""The quality of the fabric is only okay"",
+    ""Not the most comfortable seating experienced""
+  ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=76, prompt_tokens=162, total_tokens=238)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:14
+"{
+    ""Product name"": ""Kyushu Calm Lounge Sofa"",
+    ""Review Sentiment"": ""Neutral"",
+    ""Positive comments about the product"": [
+        ""Looks nice in the living room""
+    ],
+    ""Negative comments about the product"": [
+        ""The fabric quality is only okay"",
+        ""Not the most comfortable seating""
+    ]
+}",ft:gpt-3.5-turbo-1106:personal::8LPZfKpe,0.5,"CompletionUsage(completion_tokens=73, prompt_tokens=162, total_tokens=235)","
+Here is a product review from a customer, which is delimited with triple backticks.
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
+",2023-11-22 14:28:17

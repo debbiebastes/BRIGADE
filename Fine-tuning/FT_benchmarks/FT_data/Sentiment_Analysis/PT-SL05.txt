@@ -1,0 +1,18 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Keurig K-Compact Single-Serve K-Cup Pod Coffee Maker
+Review text: 
+```
+I'm not a coffee drinker but purchased this for when I have company. I was expecting a small unit but it's about as large as my regular coffee maker. The name suggests it's small. Haven't used yet. Hope it works well!
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:

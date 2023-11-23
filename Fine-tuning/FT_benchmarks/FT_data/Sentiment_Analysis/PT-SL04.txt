@@ -1,0 +1,18 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)
+Review text: 
+```
+It's always a risk with pre-builts that upgrades may not work. This 64Gb memory (2x32) worked just fine in my Lenovo Legion T7 34IAZ7 gaming PC. I can't use it to it's full capacity due to the limitations of the OEM motherboard, but I've got the 64G headroom I was looking for.
+```
+
+    What is the sentiment of that product review?
+    Identify the product being reviewed.
+    Enumerate the positive and negative aspects of the product review.
+    The response should be in JSON format  with the following elements:
+            - Product name
+            - Review Sentiment (Positive/Negative/Neutral)
+            - Positive comments about the product (Enumerate)
+            - Negative comments about the product (Enumerate)
+
+Answer:
